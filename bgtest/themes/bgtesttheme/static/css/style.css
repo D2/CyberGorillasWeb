@@ -37,27 +37,46 @@ body {
     animation-iteration-count: infinite;
 }
 .textbox-container {
+    margin: auto;
     height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    gap: 40px;
+    gap: 60px;
+    font-family: tachyon, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 .textbox {
     font-size: 50px;
     font-weight: 700;
     color: white;
     text-align: center;
+    font-family: hydrophilia-iced, sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+.arrowdown {
+    max-width: 300px;
+    transform: rotate(90deg);
+    filter: hue-rotate(100deg);
 }
 .textbox-container a{
     padding: 30px;
     font-size: 30px;
-    background-color: pink;
+    background-color: darkgreen;
+    font-family: hydrophilia-iced, sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
 }
 
 .textbox-container a:link,a:visited {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -66,7 +85,8 @@ body {
     flex-direction: column;
     gap: 40px;
     max-width: 800px;
-    align-items: center;
+    /*align-items: center;*/
+    margin: auto;
 }
 .info-container .infobox:nth-child(even){
     align-self: end;
@@ -83,32 +103,53 @@ body {
     margin-top: 100px;
     max-width: 800px;
     display: grid;
+    grid-template-columns: 1fr;
     gap: 40px;
     align-items: center;
     justify-content: center;
-
+    margin: 100px auto;
 }
 
 .roadmap-entry {
     min-width: 300px;
-    max-width: 500px;
+    max-width: 600px;
     border-radius: 20px;
     background-color: pink;
     padding: 50px 30px 50px 30px;
     position: relative;
-    margin-right: 70px;
+    margin-right: 60px;
 }
 .roadmap-entry:after {
+    z-index: 2;
     content: '';
     height: 60px;
     width: 60px;
     border-radius: 30px;
 
-    background-color: grey;
+    background: radial-gradient(circle at 20px 20px, #333333, #000);
     position: absolute;
     right: -50px;
-    top: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
-.roadmap-entry:nth-child(1):after {
-    background-color: greenyellow;
+.roadmap-entry.done:after {
+    background: radial-gradient(circle at 20px 20px, #3e6c37, #000);
+}
+.roadmap-entry:first-child:before {
+    content: '';
+    width: 0;
+}
+
+
+.roadmap-entry:before {
+    content: '';
+    position: absolute;
+    height: 110px;
+    width: 15px;
+    background: linear-gradient(to right, black, #333333FF, black);
+    right: 0;
+    top: -75px;
+}
+.roadmap-entry.done:before {
+    background: linear-gradient(to right, black, #3e6c37, black);
 }
