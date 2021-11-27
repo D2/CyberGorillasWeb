@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+    background: url("https://cdn.discordapp.com/attachments/913686029276418049/913878805557424128/unknown.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat repeat;
+
+    animation-name: BgScroll;
+    animation-duration: 5000ms;
+    animation-delay: 1s;
+}
+@keyframes BgScroll {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -2000px
+    }
+}
+
+
+.textbox {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
