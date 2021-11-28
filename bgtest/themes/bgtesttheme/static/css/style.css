@@ -1,3 +1,6 @@
+/*@import url('/fonts/ChevyRay_-_Vector.ttf');*/
+@font-face { font-family: chevy-vector;
+    src: url('/fonts/ChevyRay_-_Vector.ttf')};}
 * {
     margin: 0;
     padding: 0;
@@ -10,35 +13,99 @@ body {
     display: flex;
     justify-content: center;
 }
-@keyframes BgScroll {
+@keyframes bgScroll {
     0% {
-        left: 0;
+        background-position : 0px 0px;
     }
     100% {
-        left: -100%;
+        background-position : -300vw 0;
+    }
+}
+@keyframes bgRandom {
+    0% {
+        background-position-y: 0px;
+    }
+    50% {
+        background-position-y: 20px;
+    }
+    100% {
+        background-position-y: 0px;
+    }
+}
+@keyframes bgRandom2 {
+    0% {
+        background-position-x: 0px;
+        background-position-y: 0px;
+    }
+    50% {
+        background-position-x: 2px;
+        background-position-y: 5px;
+    }
+    100% {
+        background-position-x: 0px;
+        background-position-y: 0px;
     }
 }
 .bg-container {
     position: fixed;
-    overflow: hidden;
     z-index: -1;
     width: 100vw;
     height: 100vh;
     top:0;
     left: 0;
+
 }
-.bg-container img {
-    height: 100%;
+.bg-container #bg_colour {
+    background: url("/img/bg colour.png");
+}
+.bg-container #background_cityscape {
+    background: url("/img/background cityscape.png");
+}
+.bg-container #mid_trees {
+    background: url("/img/midtrees.png") ;
+}
+.bg-container #mid_robots {
+    background: url("/img/midrobot.png");
+}
+.bg-container #foreground {
+    background: url("/img/foreground.png");
+}
+.bg-container #foreground_robot {
+    background: url("/img/foregroundrobot.png");
+}
+.bg-container #godrays {
+    background: url("/img/godrays.png");
+}
+.bg-container #godrays,
+.bg-container #foreground_robot,
+.bg-container #foreground,
+.bg-container #mid_robots,
+.bg-container #mid_trees,
+.bg-container #background_cityscape,
+.bg-container #bg_colour {
     position: absolute;
-    animation-timing-function: linear;
-    left: 0px;
-    animation-duration: 40s;
-    animation-name: BgScroll;
-    animation-iteration-count: infinite;
+    height: 100%;
+    width: 5000px;
+    background-size: cover;
+    animation: bgScroll 150s linear infinite;
+}
+
+.bg-container #background_cityscape {
+    animation: bgScroll 150s linear infinite, bgRandom 5s linear infinite;
+}
+.bg-container #godrays {
+    animation: bgScroll 150s linear infinite, bgRandom 5s linear infinite;
+}
+.bg-container #foreground {
+    animation: bgScroll 150s linear infinite, bgRandom 2s linear infinite, bgRandom2 2s linear infinite;
+}
+.bg-container #foreground_robot {
+    animation: bgScroll 150s linear infinite, bgRandom 2s linear infinite, bgRandom2 2s linear infinite;
 }
 .textbox-container {
     margin: auto;
-    height: 100vh;
+    height: auto;
+    margin-bottom: 200px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -84,56 +151,89 @@ body {
     display:flex;
     flex-direction: column;
     gap: 40px;
-    max-width: 800px;
-    /*align-items: center;*/
+    max-width: 1600px;
     margin: auto;
-}
-.info-container .infobox:nth-child(even){
-    align-self: end;
-    background: pink;
-}
-.infobox {
-    padding: 20px;
-    max-width: 400px;
-    background-color: white;
-    font-family: Montserrat;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 1;
 }
 
+.infobox {
+    max-width: 700px;
+    aspect-ratio: 660 / 445;
+    background-color: white;
+    padding: 20px;
+    font-family: Montserrat;
+    background: url("/img/textbox.gif") no-repeat;
+    background-size: cover;
+    color: white;
+    padding-bottom: 50px;
+    display: flex;
+    flex-grow: 1;
+
+    justify-content: center;
+}
+.infobox:nth-child(even) {
+    background: url("/img/textboxparchment.gif") no-repeat;
+    background-size: cover;
+    padding: 20px;
+    color: black;
+}
+.infobox-text {
+    font-family: chevy-vector;
+    font-size: 33px;
+    flex-grow: 1;
+    padding: 80px 15% 40px 15%;
+}
+.infobox-image {
+    flex-grow: 1;
+    margin-top: 50px;
+    max-width: 450px;
+    margin-left: -25%;
+}
+.infobox-image img {
+    width: 100%;
+}
 .roadmap {
-    margin-top: 100px;
     max-width: 800px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
-    align-items: center;
-    justify-content: center;
     margin: 100px auto;
+
 }
 
 .roadmap-entry {
-    min-width: 300px;
-    max-width: 600px;
+    max-widh: 600px;
     border-radius: 20px;
-    background-color: pink;
     padding: 50px 30px 50px 30px;
     position: relative;
-    margin-right: 60px;
+    background: linear-gradient(to right, #0a1115 90%, #000000);
+    color: white;
+    font-family: tachyon, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 .roadmap-entry:after {
     z-index: 2;
     content: '';
     height: 60px;
-    width: 60px;
+    width: 100px;
     border-radius: 30px;
 
-    background: radial-gradient(circle at 20px 20px, #333333, #000);
+    background: radial-gradient(circle at 50px 35px, #333333, #000);
     position: absolute;
-    right: -50px;
+    right: -40px;
     top: 50%;
     transform: translate(-50%, -50%);
+
+}
+.roadmap-entry:not(.done) {
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.19) 70% , rgba(255, 255, 255, 0.09)),
+    linear-gradient(to top right, rgba(0, 0, 0, 0.19) 70% , rgba(255, 255, 255, 0.09));
 }
 .roadmap-entry.done:after {
-    background: radial-gradient(circle at 20px 20px, #3e6c37, #000);
+    background: radial-gradient(circle at 50px 35px, #46a637, #000);
 }
 .roadmap-entry:first-child:before {
     content: '';
@@ -142,14 +242,29 @@ body {
 
 
 .roadmap-entry:before {
+    z-index: 1;
     content: '';
     position: absolute;
-    height: 110px;
-    width: 15px;
-    background: linear-gradient(to right, black, #333333FF, black);
-    right: 0;
-    top: -75px;
+    height: 120px;
+    width: 35px;
+    right: 40px;
+    top: -70px;
+}
+
+@keyframes MatrixAnimaton {
+    0% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
 }
 .roadmap-entry.done:before {
-    background: linear-gradient(to right, black, #3e6c37, black);
+    background:  url("/matrix.png");
+    background-size: 300px;
+    background-repeat: repeat;
+    animation-name: MatrixAnimaton;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
