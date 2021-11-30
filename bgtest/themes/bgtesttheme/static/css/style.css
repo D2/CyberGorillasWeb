@@ -1,285 +1,118 @@
-/*!*@import url('/fonts/ChevyRay_-_Vector.ttf');*!*/
-/*@font-face { font-family: chevy-vector;*/
-/*    src: url('/fonts/ChevyRay_-_Vector.ttf')};}*/
-/** {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*}*/
+@keyframes bgScroll {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -300vw 0;
+  }
+}
+@keyframes bgRandom {
+  0% {
+    background-position-y: 0px;
+  }
+  50% {
+    background-position-y: 20px;
+  }
+  100% {
+    background-position-y: 0px;
+  }
+}
+@keyframes bgRandom2 {
+  0% {
+    background-position-x: 0px;
+    background-position-y: 0px;
+  }
+  50% {
+    background-position-x: 2px;
+    background-position-y: 5px;
+  }
+  100% {
+    background-position-x: 0px;
+    background-position-y: 0px;
+  }
+}
+.bg-container {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
 
-/*body {*/
-/*    width: 100%;*/
-/*    min-height: 100vh;*/
-/*    padding-bottom: 100px;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*}*/
-/*@keyframes bgScroll {*/
-/*    0% {*/
-/*        background-position : 0px 0px;*/
-/*    }*/
-/*    100% {*/
-/*        background-position : -300vw 0;*/
-/*    }*/
-/*}*/
-/*@keyframes bgRandom {*/
-/*    0% {*/
-/*        background-position-y: 0px;*/
-/*    }*/
-/*    50% {*/
-/*        background-position-y: 20px;*/
-/*    }*/
-/*    100% {*/
-/*        background-position-y: 0px;*/
-/*    }*/
-/*}*/
-/*@keyframes bgRandom2 {*/
-/*    0% {*/
-/*        background-position-x: 0px;*/
-/*        background-position-y: 0px;*/
-/*    }*/
-/*    50% {*/
-/*        background-position-x: 2px;*/
-/*        background-position-y: 5px;*/
-/*    }*/
-/*    100% {*/
-/*        background-position-x: 0px;*/
-/*        background-position-y: 0px;*/
-/*    }*/
-/*}*/
-/*.bg-container {*/
-/*    position: fixed;*/
-/*    z-index: -1;*/
-/*    width: 100vw;*/
-/*    height: 100vh;*/
-/*    top:0;*/
-/*    left: 0;*/
+.bg-container #bg_colour {
+  background: url("/img/bg colour.png");
+}
 
-/*}*/
-/*.bg-container #bg_colour {*/
-/*    background: url("/img/bg colour.png");*/
-/*}*/
-/*.bg-container #background_cityscape {*/
-/*    background: url("/img/background cityscape.png");*/
-/*}*/
-/*.bg-container #mid_trees {*/
-/*    background: url("/img/midtrees.png") ;*/
-/*}*/
-/*.bg-container #mid_robots {*/
-/*    background: url("/img/midrobot.png");*/
-/*}*/
-/*.bg-container #foreground {*/
-/*    background: url("/img/foreground.png");*/
-/*}*/
-/*.bg-container #foreground_robot {*/
-/*    background: url("/img/foregroundrobot.png");*/
-/*}*/
-/*.bg-container #godrays {*/
-/*    background: url("/img/godrays.png");*/
-/*}*/
-/*.bg-container #godrays,*/
-/*.bg-container #foreground_robot,*/
-/*.bg-container #foreground,*/
-/*.bg-container #mid_robots,*/
-/*.bg-container #mid_trees,*/
-/*.bg-container #background_cityscape,*/
-/*.bg-container #bg_colour {*/
-/*    position: absolute;*/
-/*    height: 100%;*/
-/*    width: 5000px;*/
-/*    background-size: cover;*/
-/*    animation: bgScroll 150s linear infinite;*/
-/*}*/
+.bg-container #background_cityscape {
+  background: url("/img/background cityscape.png");
+}
 
-/*.bg-container #background_cityscape {*/
-/*    animation: bgScroll 150s linear infinite, bgRandom 5s linear infinite;*/
-/*}*/
-/*.bg-container #godrays {*/
-/*    animation: bgScroll 150s linear infinite, bgRandom 5s linear infinite;*/
-/*}*/
-/*.bg-container #foreground {*/
-/*    animation: bgScroll 150s linear infinite, bgRandom 2s linear infinite, bgRandom2 2s linear infinite;*/
-/*}*/
-/*.bg-container #foreground_robot {*/
-/*    animation: bgScroll 150s linear infinite, bgRandom 2s linear infinite, bgRandom2 2s linear infinite;*/
-/*}*/
+.bg-container #mid_trees {
+  background: url("/img/midtrees.png");
+}
 
-/*.textbox-container {*/
-/*    margin: auto;*/
-/*    height: auto;*/
-/*    margin-bottom: 200px;*/
-/*    display: flex;*/
-/*    justify-content: flex-start;*/
-/*    align-items: center;*/
-/*    flex-direction: column;*/
-/*    gap: 60px;*/
-/*    font-family: tachyon, sans-serif;*/
-/*    font-weight: 400;*/
-/*    font-style: normal;*/
-/*}*/
-/*.textbox {*/
-/*    font-size: 50px;*/
-/*    font-weight: 700;*/
-/*    color: white;*/
-/*    text-align: center;*/
-/*    font-family: hydrophilia-iced, sans-serif;*/
+.bg-container #mid_robots {
+  background: url("/img/midrobot.png");
+}
 
-/*    font-weight: 400;*/
+.bg-container #foreground {
+  background: url("/img/foreground.png");
+}
 
-/*    font-style: normal;*/
-/*}*/
-/*.arrowdown {*/
-/*    max-width: 300px;*/
-/*    transform: rotate(90deg);*/
-/*    filter: hue-rotate(100deg);*/
-/*}*/
-/*.textbox-container a{*/
-/*    padding: 30px;*/
-/*    font-size: 30px;*/
-/*    background-color: darkgreen;*/
-/*    font-family: hydrophilia-iced, sans-serif;*/
+.bg-container #foreground_robot {
+  background: url("/img/foregroundrobot.png");
+}
 
-/*    font-weight: 400;*/
+.bg-container #godrays {
+  background: url("/img/godrays.png");
+}
 
-/*    font-style: normal;*/
-/*}*/
+.bg-container #godrays,
+.bg-container #foreground_robot,
+.bg-container #foreground,
+.bg-container #mid_robots,
+.bg-container #mid_trees,
+.bg-container #background_cityscape,
+.bg-container #bg_colour {
+  position: absolute;
+  height: 100%;
+  width: 5000px;
+  background-size: cover;
+  animation: bgScroll 150s linear infinite;
+}
 
-/*.textbox-container a:link,a:visited {*/
-/*    color: white;*/
-/*    text-decoration: none;*/
-/*}*/
+.bg-container #background_cityscape {
+  animation: bgScroll 150s linear infinite, bgRandom 5s linear infinite;
+}
 
-/*.info-container {*/
-/*    display:flex;*/
-/*    flex-direction: column;*/
-/*    gap: 40px;*/
-/*    max-width: 1600px;*/
-/*    margin: auto;*/
-/*    align-items: center;*/
-/*    flex-shrink: 0;*/
-/*    flex-grow: 1;*/
-/*}*/
+.bg-container #godrays {
+  animation: bgScroll 150s linear infinite, bgRandom 5s linear infinite;
+}
 
-/*.infobox {*/
-/*    max-width: 700px;*/
-/*    aspect-ratio: 660 / 445;*/
-/*    background-color: white;*/
-/*    padding: 20px;*/
-/*    font-family: Montserrat;*/
-/*    background: url("/img/textbox.gif") no-repeat;*/
-/*    background-size: cover;*/
-/*    color: white;*/
-/*    padding-bottom: 50px;*/
-/*    display: flex;*/
-/*    flex-grow: 1;*/
+.bg-container #foreground {
+  animation: bgScroll 150s linear infinite, bgRandom 2s linear infinite, bgRandom2 2s linear infinite;
+}
 
-/*    justify-content: center;*/
-/*}*/
-/*.infobox:nth-child(even) {*/
-/*    background: url("/img/textboxparchment.gif") no-repeat;*/
-/*    background-size: cover;*/
-/*    padding: 20px;*/
-/*    color: black;*/
-/*}*/
-/*@keyframes TextAnimation {*/
-/*    0% {*/
-/*        line-height: 25px;*/
-/*    }*/
-/*    50% {*/
-/*        line-height: 27px;*/
-/*    }*/
-/*    100% {*/
-/*        line-height: 25px;*/
-/*    }*/
-/*}*/
-/*.infobox-text {*/
-/*    font-family: chevy-vector;*/
-/*    font-size: 33px;*/
-/*    flex-grow: 1;*/
-/*    padding: 80px 15% 40px 15%;*/
-/*    animation: TextAnimation 2s linear infinite;*/
-/*}*/
-/*.infobox-image {*/
-/*    flex-grow: 1;*/
-/*    margin-top: 50px;*/
-/*    max-width: 450px;*/
-/*    margin-left: -25%;*/
-/*}*/
-/*.infobox-image img {*/
-/*    width: 100%;*/
-/*}*/
-/*.roadmap {*/
-/*    max-width: 800px;*/
-/*    display: grid;*/
-/*    grid-template-columns: 1fr;*/
-/*    gap: 40px;*/
-/*    margin: 100px auto;*/
+.bg-container #foreground_robot {
+  animation: bgScroll 150s linear infinite, bgRandom 2s linear infinite, bgRandom2 2s linear infinite;
+}
 
-/*}*/
+@font-face {
+  font-family: chevy-vector;
+  src: url("/fonts/ChevyRay_-_Vector.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
 
-/*.roadmap-entry {*/
-/*    max-widh: 600px;*/
-/*    border-radius: 20px;*/
-/*    padding: 50px 30px 50px 30px;*/
-/*    position: relative;*/
-/*    background: linear-gradient(to right, #0a1115 90%, #000000);*/
-/*    color: white;*/
-/*    font-family: tachyon, sans-serif;*/
-/*    font-weight: 400;*/
-/*    font-style: normal;*/
-/*}*/
-/*.roadmap-entry:after {*/
-/*    z-index: 2;*/
-/*    content: '';*/
-/*    height: 60px;*/
-/*    width: 100px;*/
-/*    border-radius: 30px;*/
+body {
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
 
-/*    background: radial-gradient(circle at 50px 35px, #333333, #000);*/
-/*    position: absolute;*/
-/*    right: -40px;*/
-/*    top: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-
-/*}*/
-/*.roadmap-entry:not(.done) {*/
-/*    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.19) 70% , rgba(255, 255, 255, 0.09)),*/
-/*    linear-gradient(to top right, rgba(0, 0, 0, 0.19) 70% , rgba(255, 255, 255, 0.09));*/
-/*}*/
-/*.roadmap-entry.done:after {*/
-/*    background: radial-gradient(circle at 50px 35px, #46a637, #000);*/
-/*}*/
-/*.roadmap-entry:first-child:before {*/
-/*    content: '';*/
-/*    width: 0;*/
-/*}*/
-
-
-/*.roadmap-entry:before {*/
-/*    z-index: 1;*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    height: 120px;*/
-/*    width: 35px;*/
-/*    right: 40px;*/
-/*    top: -70px;*/
-/*}*/
-
-/*@keyframes MatrixAnimaton {*/
-/*    0% {*/
-/*        background-position: 0 100%;*/
-/*    }*/
-/*    100% {*/
-/*        background-position: 0 0;*/
-/*    }*/
-/*}*/
-
-
-/*.roadmap-entry.done:before {*/
-/*    background:  url("/matrix.png");*/
-/*    background-size: 300px;*/
-/*    background-repeat: repeat;*/
-/*    animation-name: MatrixAnimaton;*/
-/*    animation-duration: 4s;*/
-/*    animation-iteration-count: infinite;*/
-/*    animation-timing-function: linear;*/
-/*}*/
+/*# sourceMappingURL=style.css.map */
