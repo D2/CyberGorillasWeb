@@ -10,46 +10,21 @@
     <div id="foreground_robot"></div>
 </div>
 <div class="textbox-container">
-    <img src="https://www.cyberkongz.com/static/logo_with_glow.png" alt="">
+    <img src="https://cdn.discordapp.com/attachments/913686029276418049/915359829588070450/nomatrix.gif" width="900px" alt="">
+</div>
+
+{{ range .Site.Pages }}
     <div class="textbox">
-        *not* just another NFT project
-    </div>
-</div>
-
-
-
-<div class="info-container" >
-    <div class="infobox" data-aos="fade-right">
-        <div class="infobox-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium asperiores dolorem et exercitationem
+        <div class="textbox_background">
+            <img src="https://cdn.discordapp.com/attachments/913686029276418049/914281697338601512/ui.gif" alt="">
         </div>
-    </div>
-    <div class="infobox" data-aos="fade-left">
-        <div class="infobox-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque aut, deserunt dolore
-        </div>
-    </div>
-    <div class="infobox" data-aos="fade-left">
-        <div class="infobox-text">
-            some test text
-        </div>
-        <div class="infobox-image">
-            <img src="https://cdn.discordapp.com/attachments/913777052061167616/913785920346550302/gorillabase.png" alt="">
-        </div>
-    </div>
-    <div class="infobox" data-aos="fade-left">
-        <div class="infobox-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque aut, deserunt dolore
+        <div class="textbox_content">
+            {{.Content}}
         </div>
     </div>
 
-</div>
-<div class="roadmap" data-aos="fade-up">
-    <div data-aos="fade-left" class="roadmap-entry done">Make website</div>
-    <div data-aos="fade-up" class="roadmap-entry done">Make contracts</div>
-    <div data-aos="fade-up" class="roadmap-entry">Profit</div>
-</div>
 
+{{ end }}
 <script>
     function getScrollPercent() {
         var h = document.documentElement,
@@ -63,11 +38,11 @@
         trees = document.getElementById("mid_trees")
         robots = document.getElementById("mid_robots")
         godrays = document.getElementById("godrays")
-        height = getScrollPercent() * 1
-        cityscape.style.bottom = height + "px"
-        trees.style.bottom = height / 2  + "px"
-        robots.style.bottom = height / 2  + "px"
-        godrays.style.bottom = height / 2  + "px"
+        height = getScrollPercent() * 0.1
+        cityscape.style.bottom = height + "vh"
+        trees.style.bottom = height / 10  + "vh"
+        robots.style.bottom = height / 10  + "vh"
+        godrays.style.bottom = height / 10  + "vh"
     });
 </script>
 {{end}}

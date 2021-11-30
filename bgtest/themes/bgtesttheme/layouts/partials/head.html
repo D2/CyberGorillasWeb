@@ -1,6 +1,10 @@
 <head>
     <title>BGTEST</title>
-    <link rel="stylesheet" href="/css/style.css">
+<!--    <link rel="stylesheet" href="/css/style.css">-->
+    {{ $sass := resources.Get "css/style.scss" }}
+    {{ $style := $sass | resources.ToCSS }}
+    <link rel="stylesheet" href="{{$style.Permalink}}">
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/rno0vzj.css">
