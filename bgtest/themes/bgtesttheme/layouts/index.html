@@ -2,11 +2,14 @@
 <div class="bg-container">
     <div id="bg_colour"></div>
     <div id="background_cityscape"></div>
+
+
+
+    <div id="godrays"></div>
     <div id="mid_trees"></div>
     <div id="mid_robots"></div>
-    <div id="foreground"></div>
-    <div id="godrays"></div>
     <div id="foreground_robot"></div>
+    <div id="foreground"></div>
 </div>
 <div class="logo">
     <img src="https://cdn.discordapp.com/attachments/913686029276418049/915359829588070450/nomatrix.gif" alt="">
@@ -36,15 +39,21 @@
         return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
     }
     document.addEventListener('scroll', function() {
-        cityscape = document.getElementById("background_cityscape")
-        trees = document.getElementById("mid_trees")
-        robots = document.getElementById("mid_robots")
-        godrays = document.getElementById("godrays")
-        height = getScrollPercent() * 0.1
-        cityscape.style.bottom = height + "vh"
-        trees.style.bottom = height / 10  + "vh"
-        robots.style.bottom = height / 10  + "vh"
-        godrays.style.bottom = height / 10  + "vh"
+
+        body = document.getElementsByTagName('body')[0]
+        y = body.clientHeight;
+        if (y > 1000) {
+            cityscape = document.getElementById("background_cityscape")
+            trees = document.getElementById("mid_trees")
+            robots = document.getElementById("mid_robots")
+            godrays = document.getElementById("godrays")
+            height = getScrollPercent() * 0.1
+            cityscape.style.bottom = height + "vh"
+            trees.style.bottom = height / 10  + "vh"
+            robots.style.bottom = height / 10  + "vh"
+            godrays.style.bottom = height / 10  + "vh"
+        }
+
     });
 </script>
 {{end}}

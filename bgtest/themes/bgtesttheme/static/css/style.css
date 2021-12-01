@@ -58,6 +58,7 @@
 
 .bg-container #foreground {
   background: url("/img/bg/foreground.png");
+  z-index: 0;
 }
 
 .bg-container #foreground_robot {
