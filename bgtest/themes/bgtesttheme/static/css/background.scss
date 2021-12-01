@@ -74,6 +74,10 @@
   width: 5000px;
   background-size: cover;
   animation: bgScroll 150s linear infinite;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+
 }
 
 .bg-container #background_cityscape {
