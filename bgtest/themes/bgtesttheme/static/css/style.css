@@ -101,6 +101,17 @@
   animation: bgScroll 150s linear infinite, bgRandom 2s linear infinite, bgRandom2 2s linear infinite;
 }
 
+.logo {
+  max-width: 1000px;
+  margin: auto;
+}
+.logo img {
+  width: 100%;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
 @font-face {
   font-family: chevy-vector;
   src: url("/fonts/ChevyRay_-_Vector.ttf");
