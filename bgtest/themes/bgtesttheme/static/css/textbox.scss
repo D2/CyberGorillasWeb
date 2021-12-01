@@ -1,0 +1,26 @@
+.textbox_container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+.textbox {
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+}
+.textbox_background {
+  img {
+    width: 100%;
+  }
+
+}
+
+.textbox_content {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  margin-right: 20%;
+  color:  white;
+  font-family: chevy-vector;
+  font-size: 16px;
+}

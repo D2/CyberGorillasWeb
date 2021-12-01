@@ -5,15 +5,15 @@
     <div id="mid_trees"></div>
     <div id="mid_robots"></div>
     <div id="foreground"></div>
-
     <div id="godrays"></div>
     <div id="foreground_robot"></div>
 </div>
 <div class="logo">
     <img src="https://cdn.discordapp.com/attachments/913686029276418049/915359829588070450/nomatrix.gif" alt="">
 </div>
-
-{{ range .Site.Pages }}
+{{if where .Site.RegularPages "Type" "Textboxes"}}
+<div class="textbox_container">
+    {{ range ( where .Site.RegularPages "Type" "Textboxes" | first 3 ) }}
     <div class="textbox">
         <div class="textbox_background">
             <img src="https://cdn.discordapp.com/attachments/913686029276418049/914281697338601512/ui.gif" alt="">
@@ -23,8 +23,10 @@
         </div>
     </div>
 
+    {{end}}
+</div>
+{{end}}
 
-{{ end }}
 <script>
     function getScrollPercent() {
         var h = document.documentElement,
