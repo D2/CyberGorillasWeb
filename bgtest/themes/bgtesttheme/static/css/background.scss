@@ -93,3 +93,16 @@
 .bg-container #foreground_robot {
   animation: bgScroll 150s linear infinite, bgRandom 2s linear infinite, bgRandom2 2s linear infinite;
 }
+
+@media only screen and (max-height: 1000px) {
+  .bg-container #godrays,
+  .bg-container #foreground_robot,
+  .bg-container #foreground,
+  .bg-container #mid_robots,
+  .bg-container #mid_trees,
+  .bg-container #background_cityscape,
+  .bg-container #bg_colour {
+    background-size: contain;
+  }
+
+}
