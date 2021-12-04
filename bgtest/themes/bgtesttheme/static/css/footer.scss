@@ -3,16 +3,14 @@ footer {
   font-family: chevy-vector;
   margin-right: auto;
   font-size: 30px;
-
+  //position: absolute;
   nav {
-    background: #0a1115;
-    //background: linear-gradient(to right, rgba(10, 17, 21, 0),  #0a1115 , rgba(10, 17, 21, 0));
     background: radial-gradient(circle, rgba(10,17,21,1) 0%, rgba(255,255,255,0) 100%);
     padding-block: 30px;
     display: flex;
     flex-direction: column;
     align-items:center;
-    gap: 40px;
+    //gap: 40px;
   }
 }
 

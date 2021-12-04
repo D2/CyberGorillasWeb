@@ -102,7 +102,7 @@
   animation: bgScroll 150s linear infinite, bgRandom 2s linear infinite, bgRandom2 2s linear infinite;
 }
 
-@media only screen and (max-height: 1000px) {
+@media only screen and (max-width: 1000px) {
   .bg-container #godrays,
 .bg-container #foreground_robot,
 .bg-container #foreground,
@@ -166,13 +166,11 @@ footer {
   font-size: 30px;
 }
 footer nav {
-  background: #0a1115;
   background: radial-gradient(circle, #0a1115 0%, rgba(255, 255, 255, 0) 100%);
   padding-block: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
 }
 
 footer .socials {
@@ -276,11 +274,11 @@ footer .socials img {
 
 .utility_item {
   position: relative;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .utility_item_image {
-  width: 100%;
+  max-width: 400px;
 }
 .utility_item_image img {
   width: 100%;
@@ -289,9 +287,9 @@ footer .socials img {
 .utility_item_content {
   color: white;
   font-size: 20px;
-  font-family: cinder, sans-serif;
+  font-family: tachyon, sans-serif;
   position: absolute;
-  bottom: 8%;
+  top: 58%;
   margin: 0 12% 0 14%;
 }
 
@@ -302,6 +300,10 @@ footer .socials img {
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  position: relative;
 }
 
 #content {

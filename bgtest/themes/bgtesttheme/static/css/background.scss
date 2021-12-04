@@ -94,7 +94,7 @@
   animation: bgScroll 150s linear infinite, bgRandom 2s linear infinite, bgRandom2 2s linear infinite;
 }
 
-@media only screen and (max-height: 1000px) {
+@media only screen and (max-width: 1000px) {
   .bg-container #godrays,
   .bg-container #foreground_robot,
   .bg-container #foreground,

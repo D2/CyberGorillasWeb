@@ -11,10 +11,10 @@
 }
 .utility_item {
   position: relative;
-  max-width: 300px;
+  max-width: 400px;
 }
 .utility_item_image {
-  width: 100%;
+  max-width: 400px;
   img {
     width: 100%;
   }
@@ -22,9 +22,9 @@
 .utility_item_content {
   color: white;
   font-size: 20px;
-  font-family: cinder, sans-serif;
+  font-family: tachyon, sans-serif;
 
   position: absolute;
-  bottom: 8%;
+  top: 58%;
   margin: 0 12% 0 14%;
 }
