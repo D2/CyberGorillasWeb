@@ -28,10 +28,28 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .textbox {
+    margin-bottom: 50%;
+  }
+  .textbox_background {
+    margin-left: -5%;
+    margin-right: -5%;
+    transform: scaleY(1.5) ;
+    transform-origin: top;
+
+    img {
+      width: 100%;
+    }
+  }
   .textbox_content {
-    font-size: 16px;
-    top: 14%;
+    top: 18%;
     left: 15%;
     margin-right: 10%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .textbox_content {
+
+    font-size: 16px;
   }
 }

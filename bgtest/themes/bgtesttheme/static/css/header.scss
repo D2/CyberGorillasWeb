@@ -1,0 +1,13 @@
+header {
+  position: absolute;
+  top: 30px;
+  right: 10%;
+}
+header .socials {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  img {
+    width: 50px;
+  }
+}
