@@ -1,0 +1,93 @@
+@keyframes bgScroll {
+  0% {
+    background-position: 0px 0px; }
+  100% {
+    background-position: -300vw 0; } }
+
+@keyframes bgRandom {
+  0% {
+    background-position-y: 0px; }
+  50% {
+    background-position-y: 20px; }
+  100% {
+    background-position-y: 0px; } }
+
+@keyframes bgRandom2 {
+  0% {
+    background-position-x: 0px;
+    background-position-y: 0px; }
+  50% {
+    background-position-x: 2px;
+    background-position-y: 5px; }
+  100% {
+    background-position-x: 0px;
+    background-position-y: 0px; } }
+
+.bg-container {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0; }
+
+.bg-container #bg_colour {
+  background: url("/img/bg colour.png"); }
+
+.bg-container #background_cityscape {
+  background: url("/img/background cityscape.png"); }
+
+.bg-container #mid_trees {
+  background: url("/img/midtrees.png"); }
+
+.bg-container #mid_robots {
+  background: url("/img/midrobot.png"); }
+
+.bg-container #foreground {
+  background: url("/img/foreground.png"); }
+
+.bg-container #foreground_robot {
+  background: url("/img/foregroundrobot.png"); }
+
+.bg-container #godrays {
+  background: url("/img/godrays.png"); }
+
+.bg-container #godrays,
+.bg-container #foreground_robot,
+.bg-container #foreground,
+.bg-container #mid_robots,
+.bg-container #mid_trees,
+.bg-container #background_cityscape,
+.bg-container #bg_colour {
+  position: absolute;
+  height: 100%;
+  width: 5000px;
+  background-size: cover;
+  animation: bgScroll 150s linear infinite; }
+
+.bg-container #background_cityscape {
+  animation: bgScroll 150s linear infinite, bgRandom 5s linear infinite; }
+
+.bg-container #godrays {
+  animation: bgScroll 150s linear infinite, bgRandom 5s linear infinite; }
+
+.bg-container #foreground {
+  animation: bgScroll 150s linear infinite, bgRandom 2s linear infinite, bgRandom2 2s linear infinite; }
+
+.bg-container #foreground_robot {
+  animation: bgScroll 150s linear infinite, bgRandom 2s linear infinite, bgRandom2 2s linear infinite; }
+
+@font-face {
+  font-family: chevy-vector;
+  src: url("/fonts/ChevyRay_-_Vector.ttf"); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center; }

@@ -1,0 +1,45 @@
+.accordion {
+
+  background: linear-gradient(to right, #044b04, #244924);
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  color: white;
+  font-family: tachyon;
+  font-size: 25px;
+  //margin-bottom: 10px;
+}
+
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background: #8ebe43;
+}
+
+.active + .panel {
+  padding: 20px 18px;
+}
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0px 18px;
+  background-color: #2e342a;
+  color: white;
+  font-family: chevy-vector;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out, padding 0.2s ease-in-out;
+
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.faq {
+  margin: 50px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+}
