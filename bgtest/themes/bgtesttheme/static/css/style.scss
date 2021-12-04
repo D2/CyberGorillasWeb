@@ -54,6 +54,9 @@ body {
     margin: auto;
     max-width: 700px;
     img {
+        image-rendering: pixelated;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
         width: 100%;
         margin: auto;
     }
