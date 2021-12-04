@@ -2,8 +2,8 @@
   display: grid;
   grid-template-rows: repeat(4, auto);
   grid-template-columns: repeat(2, auto);
-  max-width: 800px;
-  background-color: rgba(109, 143, 117, 0.7);
+  max-width: 1200px;
+  //background-color: rgba(109, 143, 117, 0.7);
   margin: auto;
   padding: 40px;
   border-radius: 14px;
@@ -11,11 +11,13 @@
 }
 .roadmap_image {
   grid-column: 1;
-  max-width: 200px;
+  max-width: 500px;
   img {
     width: 100%;
   }
 }
+
+
 .roadmap_info_container {
   display: flex;
   flex-direction: column;

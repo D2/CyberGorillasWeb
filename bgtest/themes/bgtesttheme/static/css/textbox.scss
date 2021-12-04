@@ -6,7 +6,7 @@
 }
 .textbox {
   position: relative;
-  max-width: 500px;
+  max-width: 1000px;
   margin: auto;
 }
 .textbox_background {
@@ -30,5 +30,8 @@
 @media only screen and (max-width: 800px) {
   .textbox_content {
     font-size: 16px;
+    top: 14%;
+    left: 15%;
+    margin-right: 10%;
   }
 }
