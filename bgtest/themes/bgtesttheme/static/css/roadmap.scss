@@ -19,7 +19,7 @@
 .roadmap_info_container {
   display: flex;
   flex-direction: column;
-  gap: 140px;
+  gap: 80px;
 }
 .roadmap_info {
   grid-column: 2;
@@ -31,12 +31,25 @@
   gap: 30px;
 }
 
+.roadmap_info_title {
+  font-family: tuppence, serif;
+
+  font-weight: 400;
+
+  font-style: normal;
+  font-size: 28px;
+}
 @media only screen and (max-width: 800px) {
+  .roadmap_container {
+    padding: 5px;
+
+  }
   .roadmap_info {
     font-size: 15px;
   }
   .roadmap_info_container {
-    gap: 30px;
+    gap: 15px;
+
   }
   .roadmap_image {
     grid-column: 1;

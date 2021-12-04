@@ -1,12 +1,13 @@
 .utility_container {
   display: flex;
-  max-width: 1400px;
+  max-width: 1500px;
   flex-wrap: wrap;
   gap: 50px;
 
   margin-top: 100px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 .utility_item {
   display: grid;
@@ -15,12 +16,19 @@
   max-width: 400px;
 }
 .utility_item_image {
+  width: 100%;
   img {
     width: 100%;
   }
 }
 .utility_item_content {
   color: white;
-  font-size: 25px;
-  font-family: chevy-vector;
+  font-size: 28px;
+  font-family: cinder, sans-serif;
+
+  font-weight: 400;
+
+  font-style: normal;
+  width: 100%;
+  text-align: center;
 }
