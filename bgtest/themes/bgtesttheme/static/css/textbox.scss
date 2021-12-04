@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 1000px;
+  margin: auto;
 }
 .textbox {
   position: relative;
@@ -22,5 +23,12 @@
   margin-right: 20%;
   color:  white;
   font-family: chevy-vector;
-  font-size: 22px;
+  font-size: 19px;
+
+}
+
+@media only screen and (max-width: 800px) {
+  .textbox_content {
+    font-size: 16px;
+  }
 }

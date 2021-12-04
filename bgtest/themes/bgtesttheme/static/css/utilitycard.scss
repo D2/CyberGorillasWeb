@@ -1,0 +1,26 @@
+.utility_container {
+  display: flex;
+  max-width: 1400px;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.utility_item {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr auto;
+  max-width: 400px;
+}
+.utility_item_image {
+  img {
+    width: 100%;
+  }
+}
+.utility_item_content {
+  color: white;
+  font-size: 25px;
+  font-family: chevy-vector;
+}

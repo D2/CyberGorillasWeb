@@ -1,0 +1,51 @@
+.roadmap_container {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(2, auto);
+  max-width: 800px;
+  background-color: rgba(109, 143, 117, 0.7);
+  margin: auto;
+  padding: 40px;
+  border-radius: 14px;
+  margin-top: 100px;
+}
+.roadmap_image {
+  grid-column: 1;
+  max-width: 200px;
+  img {
+    width: 100%;
+  }
+}
+.roadmap_info_container {
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+}
+.roadmap_info {
+  grid-column: 2;
+  color: white;
+  font-family: chevy-vector;
+  font-size: 21px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media only screen and (max-width: 800px) {
+  .roadmap_info {
+    font-size: 15px;
+  }
+  .roadmap_info_container {
+    gap: 30px;
+  }
+  .roadmap_image {
+    grid-column: 1;
+    width: 200px;
+    img {
+      width: 100%;
+    }
+  }
+  .roadmap_info_title {
+    text-align: center;
+  }
+}
