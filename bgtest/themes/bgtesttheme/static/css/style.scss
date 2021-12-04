@@ -1,0 +1,55 @@
+@import 'background';
+@import 'logo';
+@import 'textbox';
+@import 'footer';
+@import 'roadmap';
+@import 'utilitycard';
+@font-face { font-family: chevy-vector;
+    src: url('/fonts/ChevyRay_-_Vector.ttf')};
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+}
+
+#content {
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+.page-container {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+::-webkit-scrollbar{
+    width: 18px;
+    height: 18px;
+}
+::-webkit-scrollbar-thumb{
+    background: #0a1115;
+    //border: 0.8px solid #525252;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #409C50;
+}
+::-webkit-scrollbar-track{
+    background: #000000;
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px #8f7d5d;
+}
+.heading {
+    margin: auto;
+    max-width: 700px;
+    img {
+        width: 100%;
+        margin: auto;
+    }
+}

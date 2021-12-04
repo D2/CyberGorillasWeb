@@ -1,0 +1,10 @@
+.logo {
+  max-width: 600px;
+  margin: auto;
+  img {
+    width: 100%;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+}
