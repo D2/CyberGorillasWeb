@@ -163,7 +163,7 @@ footer {
   color: white;
   font-family: chevy-vector;
   margin-right: auto;
-  font-size: 30px;
+  font-size: 22px;
 }
 footer nav {
   background: radial-gradient(circle, #0a1115 0%, rgba(255, 255, 255, 0) 100%);
@@ -182,11 +182,11 @@ footer .socials {
   flex-wrap: wrap;
 }
 footer .socials img {
-  width: 60px;
+  width: 50px;
 }
 
 .footerimg {
-  height: 300px;
+  height: 200px;
 }
 .footerimg img {
   height: 100%;
@@ -199,11 +199,11 @@ footer .socials img {
   display: grid;
   grid-template-rows: repeat(4, auto);
   grid-template-columns: repeat(2, auto);
-  max-width: 1200px;
-  margin: auto;
+  max-width: 800px;
+  margin: 25px auto 50px auto;
   padding: 40px;
   border-radius: 14px;
-  margin-top: 100px;
+  background-color: rgba(10, 17, 21, 0.8);
 }
 
 .roadmap_image {
@@ -224,10 +224,11 @@ footer .socials img {
   grid-column: 2;
   color: white;
   font-family: chevy-vector;
-  font-size: 21px;
+  font-size: 17px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  max-width: 300px;
 }
 
 .roadmap_info_title {
@@ -262,6 +263,10 @@ footer .socials img {
     text-align: center;
   }
 }
+#devroadmap .roadmap_info_container {
+  gap: 20px;
+}
+
 .utility_container {
   display: flex;
   max-width: 1500px;
@@ -299,13 +304,14 @@ footer .socials img {
   max-width: 1200px;
   flex-wrap: wrap;
   flex: 1;
-  margin: auto;
+  margin: 25px auto 50px auto;
   justify-content: center;
+  column-gap: 40px;
   row-gap: 120px;
   margin-bottom: 200px;
 }
 .team_container .team_item {
-  max-width: 400px;
+  max-width: 250px;
   position: relative;
 }
 .team_container .team_item .team_item_frame {
@@ -349,6 +355,7 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
