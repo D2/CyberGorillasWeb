@@ -171,6 +171,7 @@ footer nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 40px;
 }
 
 footer .socials {
@@ -293,6 +294,37 @@ footer .socials img {
   margin: 0 12% 0 14%;
 }
 
+.team_container {
+  display: flex;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  flex: 1;
+  margin: auto;
+  justify-content: center;
+  row-gap: 120px;
+  margin-bottom: 200px;
+}
+.team_container .team_item {
+  max-width: 400px;
+  position: relative;
+}
+.team_container .team_item .team_item_frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.team_container .team_item .team_item_frame img {
+  width: 100%;
+}
+.team_container .team_item .team_item_image {
+  margin-left: 10%;
+  margin-top: 25%;
+}
+.team_container .team_item .team_item_image img {
+  width: 90%;
+}
+
 @font-face {
   font-family: chevy-vector;
   src: url("/fonts/ChevyRay_-_Vector.ttf");
@@ -322,15 +354,17 @@ body {
 ::-webkit-scrollbar {
   width: 18px;
   height: 18px;
+  transition: 500ms;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0a1115;
+  background: #409C50;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #409C50;
+  background: #3bd252;
 }
 
 ::-webkit-scrollbar-track {
@@ -346,6 +380,29 @@ body {
 .heading img {
   width: 100%;
   margin: auto;
+}
+
+#reveal1 {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#reveal1.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
 /*# sourceMappingURL=style.css.map */
