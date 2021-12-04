@@ -383,59 +383,47 @@ header .socials img {
   margin-top: 50px;
 }
 
-.arrow-r {
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid #444;
-  margin-bottom: 1%;
-  margin-right: 7px;
-  margin-left: 3px;
-  display: inline-block;
-}
-
-.arrow-d {
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #444;
-  margin-bottom: 6px;
-  margin-right: 5px;
-  display: inline-block;
-}
-
-.collapse-container > :nth-child(odd) {
-  padding: 5px;
-  background-color: gray;
-  background-image: linear-gradient(bottom, gray 14%, #969696 70%);
-  background-image: -o-linear-gradient(bottom, gray 14%, #969696 70%);
-  background-image: -moz-linear-gradient(bottom, gray 14%, #969696 70%);
-  background-image: -webkit-linear-gradient(bottom, gray 14%, #969696 70%);
-  background-image: -ms-linear-gradient(bottom, gray 14%, #969696 70%);
-  border: 1px solid black;
-  margin: auto;
-}
-
-.collapse-container > :nth-child(even) {
-  background-color: white;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  border: 1px solid black;
-}
-
-.collapse-container > :nth-child(even) p {
-  padding: 0px 5px;
-}
-
-.collapse-container > :nth-child(odd):hover {
+.accordion {
+  background: linear-gradient(to right, #044b04, #244924);
+  color: #444;
   cursor: pointer;
-  -moz-user-select: none;
-  /* mozilla browsers */
-  -khtml-user-select: none;
-  /* webkit browsers */
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  color: white;
+  font-family: tachyon;
+  font-size: 25px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background: #8ebe43;
+}
+
+.active + .panel {
+  padding: 20px 18px;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0px 18px;
+  background-color: #2e342a;
+  color: white;
+  font-family: chevy-vector;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out, padding 0.2s ease-in-out;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.faq {
+  margin: 50px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 @font-face {
@@ -494,6 +482,16 @@ body {
 .heading img {
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  width: 100%;
+  margin: auto;
+}
+
+#faq {
+  filter: invert(1);
+  max-width: 500px;
+}
+#faq img {
   image-rendering: crisp-edges;
   width: 100%;
   margin: auto;

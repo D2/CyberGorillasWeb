@@ -133,8 +133,75 @@
         </div>
     </div>
 </div>
+<div class="heading" id="faq"  data-aos="fade-up-left">
+    <img src="/img/headers/preview.png" alt="">
+</div>
+<div class="faq" data-aos="fade-left">
+    <button class="accordion">What are you marketing plans for the future?</button>
+    <div class="panel">
+        <p>We recognise the importance of marketing amongst NFT projects and plan to continue driving hype around the project using powerful marketing campaigns. Overtime, we want to see CyberGorilla holders thrive amongst the market and one of the best ways to do this is through collaborating with similarly successful projects in featured utilities such as cross-breeding.
+        </p>
+    </div>
 
+    <button class="accordion">What is the total supply?</button>
+    <div class="panel">
+        <p>333 Genesis CyberGorillas.<br>
+            3000 CyberGorillas.<br>
+            3333 Total.</p>
+    </div>
 
+    <button class="accordion">When will you be minting?</button>
+    <div class="panel">
+        <p>TBC. (December)</p>
+    </div>
+    <button class="accordion">How many WL spots are there?</button>
+    <div class="panel">
+        <p>1666.</p>
+    </div>
+    <button class="accordion">How many can each WL member mint?</button>
+    <div class="panel">
+        <p>2 maximum.</p>
+    </div>
+    <button class="accordion">What are you doing to combat gas fees?</button>
+    <div class="panel">
+        <p>We realize that this project is quickly becoming very anticipated. So we have decided to give WL members 24 hours to mint their CyberGorillas to avoid paying gas fees at peak times. Additionally, our developers are working tirelessly to ensure low gas smart contracts. Don't worry, we have your best interests at heart!
+        </p>
+    </div>
+    <button class="accordion">Will there be a public sale?</button>
+    <div class="panel">
+        <p>Any remaining CyberGorillas left over from the pre-sale will be up for grabs in the public sale, this will initiate exactly 24 hours after the pre-sale begins.
+        </p>
+    </div>
+    <button class="accordion">Which marketplace will CyberGorillas be listed on?</button>
+    <div class="panel">
+        <p>We will be listed on the OpenSea exchange.
+        </p>
+    </div>
+    <button class="accordion">What are you marketing plans for the future?
+    </button>
+    <div class="panel">
+        <p>We recognise the importance of marketing amongst NFT projects and plan to continue driving hype around the project using powerful marketing campaigns. Overtime, we want to see CyberGorilla holders thrive amongst the market and one of the best ways to do this is through collaborating with similarly successful projects in featured utilities such as cross-breeding.
+
+        </p>
+    </div>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
 <div class="heading">
     <img src="/img/headers/header4.png" alt="">
 </div>
