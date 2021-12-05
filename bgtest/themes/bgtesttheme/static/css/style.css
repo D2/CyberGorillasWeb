@@ -167,13 +167,14 @@
   }
 
   .textbox_content {
-    top: 18%;
+    top: 23%;
     left: 15%;
     margin-right: 10%;
   }
 }
 @media only screen and (max-width: 500px) {
   .textbox_content {
+    top: 26%;
     font-size: 16px;
   }
 }
@@ -403,6 +404,17 @@ header .socials img {
     transform: translateY(-20px);
   }
 }
+@media only screen and (max-width: 800px) {
+  .team_container .team_item {
+    max-width: 150px;
+  }
+  .team_container .team_item .team_item_title {
+    font-size: 15px;
+  }
+  .team_container .team_item .team_item_job {
+    font-size: 12px;
+  }
+}
 .accordion {
   background: linear-gradient(to right, #334b33, #397a39);
   color: #444;
@@ -417,6 +429,8 @@ header .socials img {
   color: white;
   font-family: tachyon;
   font-size: 25px;
+  border-radius: 15px;
+  background-clip: text;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -449,6 +463,15 @@ header .socials img {
   padding: 20px;
 }
 
+@media only screen and (max-width: 800px) {
+  .accordion {
+    font-size: 15px;
+  }
+
+  .panel {
+    font-size: 15px;
+  }
+}
 @font-face {
   font-family: chevy-vector;
   src: url("/fonts/ChevyRay_-_Vector.ttf");
@@ -505,16 +528,6 @@ body {
 .heading img {
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
-  width: 100%;
-  margin: auto;
-}
-
-#faq {
-  filter: invert(1);
-  max-width: 250px;
-}
-#faq img {
   image-rendering: crisp-edges;
   width: 100%;
   margin: auto;
