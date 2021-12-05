@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   gap: 50px;
 
-  margin-top: 100px;
+  margin-top: 50px;
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
@@ -15,6 +15,7 @@
   max-width: 400px;
 
 }
+
 .utility_item_image {
   max-width: 400px;
   img {
@@ -23,12 +24,12 @@
 }
 .utility_item_content {
   color: white;
-  font-size: 20px;
+  font-size: 19px;
   font-family: tachyon, sans-serif;
 
   position: absolute;
-  top: 58%;
-  margin: 0 12% 0 14%;
+  top: 60%;
+  margin: 0 13% 0 16%;
 }
 
 @media only screen and (max-width: 800px) {

@@ -3,7 +3,7 @@
   grid-template-rows: repeat(4, auto);
   grid-template-columns: repeat(2, auto);
   max-width: 800px;
-  margin: 25px auto 50px auto;
+  margin: 25px auto 75px auto;
   padding: 40px;
   border-radius: 14px;
   background-color: rgba(10, 17, 21, 0.8);
@@ -18,10 +18,10 @@
 
 
 .roadmap_info_container {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 20px;
 }
 .roadmap_info {
   grid-column: 2;
@@ -35,7 +35,7 @@
 }
 
 .roadmap_info_title {
-  font-family: tuppence, serif;
+  font-family: tachyon, serif;
 
   font-weight: 400;
 

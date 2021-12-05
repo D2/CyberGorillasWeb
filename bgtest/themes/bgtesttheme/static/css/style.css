@@ -233,7 +233,7 @@ header .socials img {
   grid-template-rows: repeat(4, auto);
   grid-template-columns: repeat(2, auto);
   max-width: 800px;
-  margin: 25px auto 50px auto;
+  margin: 25px auto 75px auto;
   padding: 40px;
   border-radius: 14px;
   background-color: rgba(10, 17, 21, 0.8);
@@ -248,10 +248,10 @@ header .socials img {
 }
 
 .roadmap_info_container {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 20px;
 }
 
 .roadmap_info {
@@ -266,7 +266,7 @@ header .socials img {
 }
 
 .roadmap_info_title {
-  font-family: tuppence, serif;
+  font-family: tachyon, serif;
   font-weight: 400;
   font-style: normal;
   font-size: 28px;
@@ -312,7 +312,7 @@ header .socials img {
   max-width: 1500px;
   flex-wrap: wrap;
   gap: 50px;
-  margin-top: 100px;
+  margin-top: 50px;
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
@@ -332,11 +332,11 @@ header .socials img {
 
 .utility_item_content {
   color: white;
-  font-size: 20px;
+  font-size: 19px;
   font-family: tachyon, sans-serif;
   position: absolute;
-  top: 58%;
-  margin: 0 12% 0 14%;
+  top: 60%;
+  margin: 0 13% 0 16%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -346,10 +346,10 @@ header .socials img {
 }
 .team_container {
   display: flex;
-  max-width: 1200px;
+  max-width: 1500px;
   flex-wrap: wrap;
   flex: 1;
-  margin: 25px auto 50px auto;
+  margin: 100px auto 50px auto;
   justify-content: center;
   column-gap: 40px;
   row-gap: 20px;
@@ -382,7 +382,27 @@ header .socials img {
   text-align: center;
   margin-top: 50px;
 }
+.team_container .team_item .team_item_job {
+  font-family: chevy-vector, sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
 
+.team_item {
+  cursor: pointer;
+}
+
+.team_item:hover .team_item_frame {
+  transition: 3s;
+  filter: hue-rotate(360deg);
+}
+
+@media only screen and (min-width: 1900px) {
+  #browningcard {
+    transform: translateY(-20px);
+  }
+}
 .accordion {
   background: linear-gradient(to right, #334b33, #397a39);
   color: #444;
@@ -492,7 +512,7 @@ body {
 
 #faq {
   filter: invert(1);
-  max-width: 500px;
+  max-width: 250px;
 }
 #faq img {
   image-rendering: crisp-edges;

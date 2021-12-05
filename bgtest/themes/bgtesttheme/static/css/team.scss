@@ -1,9 +1,9 @@
 .team_container {
   display: flex;
-  max-width: 1200px;
+  max-width: 1500px;
   flex-wrap: wrap;
   flex: 1;
-  margin: 25px auto 50px auto;
+  margin: 100px auto 50px auto;
   justify-content: center;
   column-gap: 40px;
   row-gap: 20px;
@@ -29,6 +29,7 @@
         width: 90%;
       }
     }
+
     .team_item_title {
       color: white;
       font-family: tachyon, sans-serif;
@@ -36,5 +37,29 @@
       text-align: center;
       margin-top: 50px;
     }
+    .team_item_job {
+      font-family: chevy-vector, sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 20px;
+    }
+
+  }
+}
+.team_item {
+  cursor: pointer;
+
+}
+.team_item:hover {
+  .team_item_frame {
+    transition: 3s;
+    filter: hue-rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  #browningcard {
+    transform: translateY(-20px);
+
   }
 }
