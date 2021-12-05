@@ -1,10 +1,10 @@
 .accordion {
-
   background: linear-gradient(to right, #044b04, #244924);
   color: #444;
   cursor: pointer;
   padding: 18px;
   width: 100%;
+  margin: auto;
   text-align: left;
   border: none;
   outline: none;
@@ -39,7 +39,9 @@
   font-size: 20px;
 }
 .faq {
-  margin: 50px 20px 0 20px;
+  margin: 50px auto 0 auto;
   display: flex;
   flex-direction: column;
+  max-width: 900px;
+  padding: 20px;
 }
