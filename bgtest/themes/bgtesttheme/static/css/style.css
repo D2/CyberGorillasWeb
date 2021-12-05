@@ -466,6 +466,10 @@ header .socials img {
   padding: 20px;
 }
 
+#faqheading {
+  margin-top: 0;
+}
+
 @media only screen and (max-width: 800px) {
   .accordion {
     font-size: 15px;
