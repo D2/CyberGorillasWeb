@@ -308,6 +308,10 @@ header .socials img {
   gap: 20px;
 }
 
+#initialroadmap .roadmap_info_container {
+  gap: 70px;
+}
+
 .utility_container {
   display: flex;
   max-width: 1500px;
@@ -429,8 +433,7 @@ header .socials img {
   color: white;
   font-family: tachyon;
   font-size: 25px;
-  border-radius: 15px;
-  background-clip: text;
+  border-radius: 15px 15px 0 0;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
