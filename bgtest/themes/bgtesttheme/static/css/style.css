@@ -294,7 +294,7 @@ header .socials img {
     position: absolute;
     max-width: 300px;
     right: 0;
-    opacity: 30%;
+    opacity: 0%;
   }
   .roadmap_image img {
     width: 100%;
