@@ -1,11 +1,15 @@
 {{define "main"}}
 
-
+<!--<div class="button_container">-->
+<!--    <p class="description">A simple pure CSS hover effect</p>-->
+<!--    <button class="btn"><span>MINT NOW!!!!</span></button>-->
+<!--</div>-->
 
 <div class="logo"  data-aos="fade-down">
     <img src="https://cdn.discordapp.com/attachments/913686029276418049/915359829588070450/nomatrix.gif" alt="">
 </div>
 {{if where .Site.RegularPages "Type" "Textboxes"}}
+
 <div class="textbox_container">
     {{ range ( where .Site.RegularPages "Type" "Textboxes" | first 3 ) }}
     <div class="textbox">
@@ -21,12 +25,9 @@
 </div>
 {{end}}
 
-
-
 <div class="heading" data-aos="fade-up">
     <img src="/img/headers/header3.png" alt="">
 </div>
-
 <!--Initial roadmap-->
 <div class="roadmap_container" id="initialroadmap">
     <div class="roadmap_image">
@@ -103,7 +104,7 @@
             </div>
         </div>
         <div class="roadmap_info">
-            <div class="roadmap_info_title" data-aos="fade-left">
+            <div class="roadmap_info_title" data-aos="fade-left" id="grilla">
                 $GRILLA Token
             </div>
             <div class="roadmap_info_content" data-aos="fade-left">
@@ -111,7 +112,7 @@
             </div>
         </div>
         <div class="roadmap_info">
-            <div class="roadmap_info_title" data-aos="fade-left">
+            <div class="roadmap_info_title" data-aos="fade-left" id="deflation">
                 Deflation & Burning Mechanics
             </div>
             <div class="roadmap_info_content" data-aos="fade-left">
@@ -131,7 +132,8 @@
                 JungleSerum
             </div>
             <div class="roadmap_info_content" data-aos="fade-left">
-                The JungleSerum will allow you to breed your CyberGorillas. Purchasable via the CyberGorilla Shop, using the JungleSerum you are permitted to breed between two CyberGorillas that will contain a mixture of the traits possessed. The breeding cap of Baby CyberGorillas is very limited. Be warned, some CyberGorillas die during pregnancy.
+                The JungleSerum will allow you to breed your CyberGorillas. Using the JungleSerum, you are permitted to breed between two CyberGorillas that will contain a mixture of the traits possessed. Be warned, some CyberGorillas die during pregnancy.
+
             </div>
         </div>
 
