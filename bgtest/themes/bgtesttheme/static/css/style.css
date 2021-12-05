@@ -229,6 +229,11 @@ header .socials img {
   width: 50px;
 }
 
+@media only screen and (max-width: 800px) {
+  header .socials img {
+    width: 40px;
+  }
+}
 .roadmap_container {
   display: grid;
   grid-template-rows: repeat(4, auto);
@@ -246,6 +251,14 @@ header .socials img {
 }
 .roadmap_image img {
   width: 100%;
+}
+
+#devroadmap .roadmap_info_container {
+  gap: 20px;
+}
+
+#initialroadmap .roadmap_info_container {
+  gap: 70px;
 }
 
 .roadmap_info_container {
@@ -303,15 +316,15 @@ header .socials img {
   .roadmap_info_title {
     text-align: center;
   }
-}
-#devroadmap .roadmap_info_container {
-  gap: 20px;
-}
 
-#initialroadmap .roadmap_info_container {
-  gap: 70px;
-}
+  #devroadmap .roadmap_info_container {
+    gap: 20px;
+  }
 
+  #initialroadmap .roadmap_info_container {
+    gap: 20px;
+  }
+}
 .utility_container {
   display: flex;
   max-width: 1500px;

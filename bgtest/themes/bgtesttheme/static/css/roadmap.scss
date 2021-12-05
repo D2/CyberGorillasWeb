@@ -15,7 +15,16 @@
     width: 100%;
   }
 }
-
+#devroadmap {
+  .roadmap_info_container {
+    gap: 20px
+  }
+}
+#initialroadmap {
+  .roadmap_info_container {
+    gap: 70px
+  }
+}
 
 .roadmap_info_container {
   margin-top: 50px;
@@ -68,14 +77,14 @@
   .roadmap_info_title {
     text-align: center;
   }
-}
-#devroadmap {
-  .roadmap_info_container {
-    gap: 20px
+  #devroadmap {
+    .roadmap_info_container {
+      gap: 20px
+    }
   }
-}
-#initialroadmap {
-  .roadmap_info_container {
-    gap: 70px
+  #initialroadmap {
+    .roadmap_info_container {
+      gap: 20px
+    }
   }
 }
