@@ -13,9 +13,6 @@
 <div class="textbox_container">
     {{ range ( where .Site.RegularPages "Type" "Textboxes" | first 3 ) }}
     <div class="textbox">
-        <div class="textbox_background">
-            <img src="https://cdn.discordapp.com/attachments/913686029276418049/914281697338601512/ui.gif" alt="">
-        </div>
         <div class="textbox_content">
             {{.Content}}
         </div>

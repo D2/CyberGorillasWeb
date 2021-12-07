@@ -129,23 +129,25 @@
   flex-wrap: wrap;
   max-width: 1000px;
   margin: auto;
+  justify-content: center;
 }
 
 .textbox {
-  position: relative;
-  max-width: 1000px;
+  max-width: 600px;
   margin: auto;
-}
-
-.textbox_background img {
-  width: 100%;
+  background-image: url("https://cdn.discordapp.com/attachments/913686029276418049/914281697338601512/ui.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 80px;
+  margin: -50px -50px 0 -50px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 
 .textbox_content {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  margin-right: 20%;
+  padding: 0 9% 7% 9%;
+  margin: 20px 5px 20px 5px;
   color: white;
   font-family: chevy-vector;
   font-size: 19px;
@@ -153,29 +155,24 @@
 
 @media only screen and (max-width: 800px) {
   .textbox {
-    margin-bottom: 50%;
-  }
-
-  .textbox_background {
-    margin-left: -5%;
-    margin-right: -5%;
-    transform: scaleY(1.5);
-    transform-origin: top;
-  }
-  .textbox_background img {
-    width: 100%;
+    padding: 70px 50px 100px 50px;
+    margin: -50px -30px 0 -30px;
   }
 
   .textbox_content {
-    top: 23%;
-    left: 15%;
-    margin-right: 10%;
+    font-size: 16px;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 450px) {
+  .textbox {
+    padding: 70px 50px 100px 50px;
+    margin: -50px -20px 0 -20px;
+  }
+
   .textbox_content {
-    top: 26%;
     font-size: 16px;
+    padding: 0 5% 7% 5%;
+    margin: 20px 5px 20px 5px;
   }
 }
 footer {
@@ -298,7 +295,7 @@ header .socials img {
 @media only screen and (max-width: 800px) {
   .roadmap_container {
     padding: 20px 0 30px 0;
-    margin-bottom: 200px;
+    margin-bottom: 75px;
   }
 
   .roadmap_info {
@@ -371,6 +368,20 @@ header .socials img {
     font-size: 16px;
   }
 }
+@media only screen and (max-width: 450px) {
+  .utility_container {
+    gap: 0px;
+  }
+
+  .utility_item {
+    position: relative;
+    max-width: 270px;
+  }
+
+  .utility_item_content {
+    font-size: 12px;
+  }
+}
 .team_container {
   display: flex;
   max-width: 1500px;
@@ -431,6 +442,10 @@ header .socials img {
   }
 }
 @media only screen and (max-width: 800px) {
+  .team_container {
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
   .team_container .team_item {
     max-width: 150px;
   }

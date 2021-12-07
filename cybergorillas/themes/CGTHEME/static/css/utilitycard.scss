@@ -38,3 +38,16 @@
   }
 
 }
+@media only screen and (max-width: 450px) {
+  .utility_container {
+    gap: 0px;
+  }
+  .utility_item {
+    position: relative;
+    max-width: 270px;
+
+  }
+  .utility_item_content {
+    font-size: 12px;
+  }
+}
