@@ -10,6 +10,11 @@
 </div>
 {{if where .Site.RegularPages "Type" "Textboxes"}}
 
+<!--Minting Button-->
+<div class="mint_container">
+    <a id="mint_button" href="/mint.html">Mint now!</a>
+</div>
+
 <div class="textbox_container">
     {{ range ( where .Site.RegularPages "Type" "Textboxes" | first 3 ) }}
     <div class="textbox">
@@ -21,9 +26,14 @@
 </div>
 {{end}}
 
+
+
 <div class="heading" data-aos="fade-up">
     <img src="/img/headers/header3.png" alt="">
 </div>
+
+
+
 <!--Initial roadmap-->
 <div class="roadmap_container" id="initialroadmap">
     <div class="roadmap_image">

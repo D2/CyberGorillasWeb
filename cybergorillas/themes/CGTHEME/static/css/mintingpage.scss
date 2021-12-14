@@ -1,0 +1,196 @@
+
+
+
+#mint_page_container {
+
+  min-height: 100vh;
+  display: flex;
+  //align-items: center;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.minting_container {
+
+  max-width: 900px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mint_heading {
+  grid-row: 1;
+  color: #6cdddd;
+  font-family: hydrophilia-iced, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: capitalize;
+  font-size: 50px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+
+  max-width: 600px;
+  margin: auto;
+  background-image: url("https://cdn.discordapp.com/attachments/913686029276418049/914281697338601512/ui.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  //aspect-ratio: 1 / 0.2;
+  padding: 80px;
+  margin: -50px -50px 0 -50px;
+}
+
+.mint_image_container {
+  max-width: 200px;
+  img {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+}
+
+.mySlides {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .8}
+  to {opacity: 1}
+}
+.connect-button {
+  color: white;
+  font-family: chevy-vector;
+  background-color: black;
+  max-width: 400px;
+  padding: 15px;
+  padding-block: 40px;
+  margin: 15px auto 15px auto;
+  border-radius: 15px;
+  font-size: 30px;
+  grid-row: 3;
+  grid-column: 1;
+  text-align: center;
+}
+
+
+.amount_container {
+  margin-left: 20px;
+  gap: 20px;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  input {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    max-width: 300px;
+    height: 25px; /* Specified height */
+    background: #000000; /* Grey background */
+    outline: none; /* Remove outline */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none; /* Override default look */
+      appearance: none;
+      width: 25px; /* Set a specific slider handle width */
+      height: 25px; /* Slider handle height */
+      background: #35ddb6; /* Green background */
+      cursor: pointer; /* Cursor on hover */
+    }
+
+    &::-moz-range-thumb {
+      width: 25px; /* Set a specific slider handle width */
+      height: 25px; /* Slider handle height */
+      background: #35ddb6; /* Green background */
+      cursor: pointer; /* Cursor on hover */
+    }
+
+  }
+
+
+  output {
+    color: white;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 80px;
+
+    font-family: chevy-vector, sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    padding: 15px 0px 0 10px;
+    color: white;
+  }
+}
+.mint_submit_container {
+  grid-row: 4;
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+}
+.mint_submit_button {
+  margin: auto;
+  color: white;
+  font-family: chevy-vector;
+  justify-content: center;
+  background-color: #4e9959;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  width: min-content;
+  padding: 10px 60px;
+}
+
+.mint_image_amount_container {
+  max-width: 600px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 800px) {
+  .mint_heading {
+    padding: 70px 50px 100px 50px;
+    margin: -50px -30px 0 -30px;
+  }
+  .mint_heading {
+    font-size: 30px;
+  }
+
+
+}
+@media only screen and (max-width: 450px) {
+  .mint_heading {
+    padding: 50px 50px 50px 50px;
+    margin: -50px -20px 0 -20px;
+  }
+  .amount_container output {
+    font-size: 55px;
+    padding: 10px 0px 0 10px;
+  }
+}
+
+
