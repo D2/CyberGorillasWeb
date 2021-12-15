@@ -29,19 +29,20 @@
   font-weight: 400;
   font-style: normal;
   text-transform: capitalize;
-  font-size: 50px;
+  font-size: 30px;
   padding: 20px;
   border-radius: 15px;
   text-align: center;
 
-  max-width: 600px;
+  max-width: 400px;
   margin: auto;
-  background-image: url("https://cdn.discordapp.com/attachments/913686029276418049/914281697338601512/ui.gif");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  //aspect-ratio: 1 / 0.2;
-  padding: 80px;
-  margin: -50px -50px 0 -50px;
+  //background-image: url("https://cdn.discordapp.com/attachments/913686029276418049/914281697338601512/ui.gif");
+  //background-repeat: no-repeat;
+  //background-size: 100% 100%;
+  ////aspect-ratio: 1 / 0.2;
+  //padding: 80px;
+  //margin: -50px -50px 0 -50px;
+  text-align: center;
 }
 
 .mint_image_container {
@@ -67,10 +68,10 @@
 }
 
 .mySlides {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+  //-webkit-animation-name: fade;
+  //-webkit-animation-duration: 1.5s;
+  //animation-name: fade;
+  //animation-duration: 1.5s;`
 }
 
 @-webkit-keyframes fade {
@@ -185,7 +186,7 @@
 }
 
 .mint_image_amount_container {
-  max-width: 600px;
+  //max-width: 600px;
   margin: 0 auto 0 auto;
   display: flex;
   flex-wrap: wrap;
