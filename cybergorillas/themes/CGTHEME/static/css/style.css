@@ -577,14 +577,32 @@ header .socials img {
   font-size: 25px;
 }
 
+@keyframes randompopup {
+  0% {
+    top: 0;
+  }
+  20% {
+    top: -50%;
+  }
+  30% {
+    top: -50%;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
 .mint_container {
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
+  margin-top: 50px;
 }
 .mint_container a#mint_button {
   flex-grow: 1;
-  max-width: 250px;
+  max-width: 400px;
   padding: 30px 20px 30px 20px;
   text-align: center;
   background: #5b7847;
@@ -593,25 +611,49 @@ header .socials img {
   text-decoration: none;
   border-radius: 5px;
   transition: 10ms;
+  position: relative;
 }
 .mint_container a#mint_button:link, .mint_container a#mint_button:visited {
   color: white;
 }
 .mint_container a#mint_button:hover, .mint_container a#mint_button:focus {
   background: #3f8648;
+  transition: transform 500ms;
   transform: scale(1.1);
-  transition: 250ms;
+  transform-style: preserve-3d;
+}
+
+a#mint_button:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-image: url("https://cdn.discordapp.com/attachments/913797588036231168/915736396281577482/gorillahat-removebg-preview-removebg-preview__2_-removebg-preview.png");
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation-name: randompopup;
+  animation-duration: 8s;
+  animation-delay: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: display 1s;
+}
+
+a#mint_button:hover:before {
+  display: none;
 }
 
 #mint_page_container {
-  min-height: 100vh;
+  min-height: 800px;
   display: flex;
   max-width: 100vw;
   overflow: hidden;
 }
 
 .minting_container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -643,6 +685,9 @@ header .socials img {
 
 .mint_image_container {
   max-width: 200px;
+  position: relative;
+  padding: 30px;
+  margin: 40px;
 }
 .mint_image_container img {
   width: 100%;
@@ -650,6 +695,12 @@ header .socials img {
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
+}
+.mint_image_container .team_item_frame img {
+  position: absolute;
+  width: 100%;
+  top: -15%;
+  left: 0%;
 }
 
 .mySlides {
@@ -661,7 +712,7 @@ header .socials img {
 
 @-webkit-keyframes fade {
   from {
-    opacity: 0.8;
+    opacity: 0.6;
   }
   to {
     opacity: 1;
@@ -669,7 +720,7 @@ header .socials img {
 }
 @keyframes fade {
   from {
-    opacity: 0.8;
+    opacity: 0.6;
   }
   to {
     opacity: 1;
@@ -681,23 +732,30 @@ header .socials img {
   background-color: black;
   max-width: 400px;
   padding: 15px;
-  padding-block: 40px;
+  padding-block: 20px;
   margin: 15px auto 15px auto;
   border-radius: 15px;
-  font-size: 30px;
+  font-size: 20px;
   grid-row: 3;
   grid-column: 1;
   text-align: center;
 }
 
-.amount_container {
-  margin-left: 20px;
+.mint_image_amount_container {
+  display: flex;
+  justify-content: space-around;
   gap: 20px;
+}
+
+.amount_container {
+  gap: 50px;
   max-width: 300px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.amount_container input {
+.amount_container #range {
   -webkit-appearance: none;
   /* Override default CSS styles */
   appearance: none;
@@ -712,7 +770,7 @@ header .socials img {
   /* 0.2 seconds transition on hover */
   transition: opacity 0.2s;
 }
-.amount_container input::-webkit-slider-thumb {
+.amount_container #range::-webkit-slider-thumb {
   -webkit-appearance: none;
   /* Override default look */
   appearance: none;
@@ -725,7 +783,7 @@ header .socials img {
   cursor: pointer;
   /* Cursor on hover */
 }
-.amount_container input::-moz-range-thumb {
+.amount_container #range::-moz-range-thumb {
   width: 25px;
   /* Set a specific slider handle width */
   height: 25px;
@@ -735,12 +793,12 @@ header .socials img {
   cursor: pointer;
   /* Cursor on hover */
 }
-.amount_container output {
+.amount_container #number {
   color: white;
-  width: 80px;
-  height: 80px;
+  width: auto;
+  height: 50px;
   text-align: center;
-  font-size: 80px;
+  font-size: 50px;
   font-family: chevy-vector, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -748,9 +806,11 @@ header .socials img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 50px;
-  padding: 15px 0px 0 10px;
   color: white;
+  text-align: center;
+  border: none;
+  padding: 10px 0 10px 15px;
+  border-radius: 20px;
 }
 
 .mint_submit_container {
@@ -761,7 +821,6 @@ header .socials img {
 }
 
 .mint_submit_button {
-  margin: auto;
   color: white;
   font-family: chevy-vector;
   justify-content: center;
@@ -770,8 +829,10 @@ header .socials img {
   align-items: center;
   justify-content: center;
   font-size: 40px;
-  width: min-content;
-  padding: 10px 60px;
+  max-width: 300px;
+  flex-grow: 1;
+  margin: auto;
+  margin-top: 50px;
 }
 
 .mint_image_amount_container {
@@ -788,18 +849,18 @@ header .socials img {
   }
 
   .mint_heading {
-    font-size: 30px;
+    font-size: 35px;
   }
 }
 @media only screen and (max-width: 450px) {
   .mint_heading {
     padding: 50px 50px 50px 50px;
     margin: -50px -20px 0 -20px;
+    font-size: 30px;
   }
 
-  .amount_container output {
+  .amount_container #number {
     font-size: 55px;
-    padding: 10px 0px 0 10px;
   }
 }
 @font-face {

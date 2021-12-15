@@ -1,27 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CyberGorillas | Mint</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/rno0vzj.css">
-
-
-</head>
+<html>
+{{- partial "head.html" . -}}
 <body>
-    <div class="bg-container">
-        <div id="bg_colour"></div>
-        <div id="background_cityscape"></div>
-        <div id="godrays"></div>
-        <div id="mid_trees"></div>
-        <div id="mid_robots"></div>
-        <div id="foreground_robot"></div>
-        <div id="foreground"></div>
-    </div>
-    <div id="mint_page_container">
+{{- partial "background.html" . -}}
+<div id="mint_page_container">
         <div class="minting_container">
             <div class="mint_heading">
-                CyberGorillas Official Minting Page
+                CyberGorillas Mint
             </div>
             <div class="connect-button">
                 Connect your wallet
@@ -46,7 +31,12 @@
                         <div class="mySlides">
                             <img src="https://cdn.discordapp.com/attachments/916103736768733204/916738285378867230/1O1_-_First.png">
                         </div>
+                        <div class="team_item_frame">
+                            <img src="https://cdn.discordapp.com/attachments/913686029276418049/916751090207309914/picture_frame.gif" alt="">
+                        </div>
                     </div>
+
+
                     <script>
                         var slideIndex = 0;
                         showSlides();
@@ -66,9 +56,21 @@
                 </div>
 
                 <div class="amount_container">
-                    <input type="range" value="24" min="1" max="3" oninput="this.nextElementSibling.value = this.value">
-                    <output>1</output>
+                    <input type="number" value="1" id="number" min="1" max="2" onkeyup="changeRangeValue(this.value)"/>
+                    <input type="range" min="1" max="2" id="range" name="amount" value="0" oninput="changeInputValue(this.value)" />
                 </div>
+                <script>
+
+                    function changeRangeValue(val){
+                        document.getElementById("range").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+                    }
+
+                    function changeInputValue(val){
+                        document.getElementById("number").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+                    }
+                </script>
+
+
             </div>
             <div class="mint_submit_container">
                 <div class="mint_submit_button">
@@ -77,6 +79,10 @@
             </div>
 
         </div>
-    </div>
+
+</div>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>

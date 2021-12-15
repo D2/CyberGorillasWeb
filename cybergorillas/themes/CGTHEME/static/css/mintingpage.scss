@@ -3,7 +3,7 @@
 
 #mint_page_container {
 
-  min-height: 100vh;
+  min-height: 800px;
   display: flex;
   //align-items: center;
   max-width: 100vw;
@@ -12,7 +12,7 @@
 
 .minting_container {
 
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -46,12 +46,23 @@
 
 .mint_image_container {
   max-width: 200px;
+  position: relative;
+  padding: 30px;
+  margin: 40px;
+
   img {
     width: 100%;
     height: auto;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+  }
+
+  .team_item_frame img {
+    position: absolute;
+    width: 100%;
+    top: -15%;
+    left: -0%;
   }
 }
 
@@ -63,12 +74,12 @@
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .8}
+  from {opacity: 0.6}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .8}
+  from {opacity: 0.6}
   to {opacity: 1}
 }
 .connect-button {
@@ -77,23 +88,28 @@
   background-color: black;
   max-width: 400px;
   padding: 15px;
-  padding-block: 40px;
+  padding-block: 20px;
   margin: 15px auto 15px auto;
   border-radius: 15px;
-  font-size: 30px;
+  font-size: 20px;
   grid-row: 3;
   grid-column: 1;
   text-align: center;
 }
 
-
-.amount_container {
-  margin-left: 20px;
+.mint_image_amount_container {
+  display: flex;
+  justify-content: space-around;
   gap: 20px;
+}
+.amount_container {
+  gap: 50px;
   max-width: 300px;
   display: flex;
   align-items: center;
-  input {
+  justify-content: center;
+  flex-wrap: wrap;
+  #range {
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
     max-width: 300px;
@@ -122,12 +138,12 @@
   }
 
 
-  output {
+  #number {
     color: white;
-    width: 80px;
-    height: 80px;
+    width: auto ;
+    height: 50px;
     text-align: center;
-    font-size: 80px;
+    font-size: 50px;
 
     font-family: chevy-vector, sans-serif;
 
@@ -139,9 +155,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 50px;
-    padding: 15px 0px 0 10px;
     color: white;
+    text-align: center;
+    border: none;
+
+    padding: 10px 0 10px 15px;
+    border-radius: 20px;
   }
 }
 .mint_submit_container {
@@ -151,7 +170,6 @@
   align-items: center;
 }
 .mint_submit_button {
-  margin: auto;
   color: white;
   font-family: chevy-vector;
   justify-content: center;
@@ -160,8 +178,10 @@
   align-items: center;
   justify-content: center;
   font-size: 40px;
-  width: min-content;
-  padding: 10px 60px;
+  max-width: 300px;
+  flex-grow: 1;
+  margin: auto;
+  margin-top: 50px;
 }
 
 .mint_image_amount_container {
@@ -177,7 +197,7 @@
     margin: -50px -30px 0 -30px;
   }
   .mint_heading {
-    font-size: 30px;
+    font-size: 35px;
   }
 
 
@@ -186,10 +206,10 @@
   .mint_heading {
     padding: 50px 50px 50px 50px;
     margin: -50px -20px 0 -20px;
+    font-size: 30px
   }
-  .amount_container output {
+  .amount_container #number {
     font-size: 55px;
-    padding: 10px 0px 0 10px;
   }
 }
 
