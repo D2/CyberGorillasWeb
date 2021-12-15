@@ -584,14 +584,8 @@ header .socials img {
   20% {
     top: -50%;
   }
-  30% {
-    top: -50%;
-  }
-  50% {
-    top: 0;
-  }
   100% {
-    top: 0;
+    top: -50%;
   }
 }
 .mint_container {
@@ -619,8 +613,6 @@ header .socials img {
 .mint_container a#mint_button:hover, .mint_container a#mint_button:focus {
   background: #3f8648;
   transition: transform 500ms;
-  transform: scale(1.1);
-  transform-style: preserve-3d;
 }
 
 a#mint_button:before {
@@ -633,16 +625,11 @@ a#mint_button:before {
   top: 0;
   left: 0;
   z-index: -1;
-  animation-name: randompopup;
-  animation-duration: 8s;
-  animation-delay: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  transition: display 1s;
+  transition: 500ms;
 }
 
 a#mint_button:hover:before {
-  display: none;
+  top: -50%;
 }
 
 #mint_page_container {
