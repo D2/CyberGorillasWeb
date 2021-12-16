@@ -21,7 +21,10 @@
   justify-content: center;
   gap: 10px;
 }
-
+.mint-heading_container {
+  display: flex;
+  justify-content: center;
+}
 .mint_heading {
   grid-row: 1;
   color: #6cdddd;
@@ -36,13 +39,18 @@
 
   max-width: 400px;
   margin: auto;
-  //background-image: url("https://cdn.discordapp.com/attachments/913686029276418049/914281697338601512/ui.gif");
-  //background-repeat: no-repeat;
-  //background-size: 100% 100%;
-  ////aspect-ratio: 1 / 0.2;
-  //padding: 80px;
-  //margin: -50px -50px 0 -50px;
+  background-image: url("https://cdn.discordapp.com/attachments/913686029276418049/914281697338601512/ui.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+
+  //aspect-ratio: 1 / 0.2;
+  padding: 80px;
+  margin: -50px -50px 0 -50px;
   text-align: center;
+
 }
 
 .mint_image_container {
@@ -104,47 +112,69 @@
   gap: 20px;
 }
 .amount_container {
-  gap: 50px;
-  max-width: 300px;
+  //background: #2e342a;
+  max-width: 200px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
   #range {
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
     max-width: 300px;
-    height: 25px; /* Specified height */
+    height: 40px; /* Specified height */
     background: #000000; /* Grey background */
     outline: none; /* Remove outline */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
 
+    border-radius: 30px;
+
+    position: relative;
     &::-webkit-slider-thumb {
-      -webkit-appearance: none; /* Override default look */
+      -webkit-appearance: none;
       appearance: none;
-      width: 25px; /* Set a specific slider handle width */
-      height: 25px; /* Slider handle height */
-      background: #35ddb6; /* Green background */
-      cursor: pointer; /* Cursor on hover */
+      width: 35px;
+      height: 40px;
+      background: #4f852a;
+      cursor: pointer;
+      border-radius: 30px;
+      background: radial-gradient(circle at 15px 15px, #4f852a, #000);
+
     }
 
     &::-moz-range-thumb {
-      width: 25px; /* Set a specific slider handle width */
-      height: 25px; /* Slider handle height */
-      background: #35ddb6; /* Green background */
+      -webkit-appearance: none; /* Override default look */
+      appearance: none;
+      width: 35px; /* Set a specific slider handle width */
+      height: 40px; /* Slider handle height */
+      background: #4f852a; /* Green background */
       cursor: pointer; /* Cursor on hover */
+      border-radius: 30px;
+      background: radial-gradient(circle at 15px 15px, #4f852a, #000);
     }
 
+    &:after {
+      content: '';
+
+      position: absolute;
+      background: url("/img/double-arrow.svg");
+      filter: invert(1);
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      left: 50%;
+      transform: translateX(-50%);
+
+      opacity: 0.5;
+    }
   }
 
 
   #number {
     color: white;
-    width: auto ;
+    width: 40px;
     height: 50px;
     text-align: center;
-    font-size: 50px;
+    font-size: 30px;
 
     font-family: chevy-vector, sans-serif;
 
@@ -152,16 +182,28 @@
 
     font-style: normal;
 
-    background-color: black;
+    background-color: #000000;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
     border: none;
-
-    padding: 10px 0 10px 15px;
+    margin: 0 auto 0 auto;
+    padding: 5px 0 5px 5px;
     border-radius: 20px;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    &[type=number] {
+      -moz-appearance: textfield;
+    }
+
   }
 }
 .mint_submit_container {
@@ -200,7 +242,12 @@
   .mint_heading {
     font-size: 35px;
   }
-
+  .mint_submit_button {
+    margin-top: 0;
+  }
+  .mint_image_amount_container {
+    gap: 0;
+  }
 
 }
 @media only screen and (max-width: 450px) {
@@ -209,9 +256,43 @@
     margin: -50px -20px 0 -20px;
     font-size: 30px
   }
-  .amount_container #number {
-    font-size: 55px;
-  }
+
+
+  //.amount_container #number {
+  //  font-size: 55px;
+  //}
 }
 
+
+.slider_container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+
+
+  font-family: chevy-vector, sans-serif;
+  color: white;
+  gap: 20px;
+  font-size: 20px;
+  //background: #2e342a;
+  padding: 20px;
+  position: relative;
+  #range {
+    grid-column: 1 / 3  ;
+  }
+  .min {
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .max {
+    position: absolute;
+    right: 20%;
+    top: 30%;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
 
