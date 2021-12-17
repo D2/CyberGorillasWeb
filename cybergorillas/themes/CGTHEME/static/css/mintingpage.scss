@@ -1,15 +1,5 @@
 
 
-
-#mint_page_container {
-
-  min-height: 800px;
-  display: flex;
-  //align-items: center;
-  max-width: 100vw;
-  overflow: hidden;
-}
-
 .minting_container {
 
   max-width: 1000px;
@@ -28,26 +18,26 @@
 .mint_heading {
   grid-row: 1;
   color: #6cdddd;
-  font-family: hydrophilia-iced, sans-serif;
+  font-family: chevy-chocolate;
   font-weight: 400;
   font-style: normal;
   text-transform: capitalize;
   font-size: 30px;
-  padding: 20px;
   border-radius: 15px;
   text-align: center;
 
   max-width: 400px;
   margin: auto;
-  background-image: url("https://cdn.discordapp.com/attachments/913686029276418049/914281697338601512/ui.gif");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
-
+  //background-image: url("https://cdn.discordapp.com/attachments/913686029276418049/914281697338601512/ui.gif");
+  //background-repeat: no-repeat;
+  //background-size: 100% 100%;
+  //image-rendering: pixelated;
+  //image-rendering: -moz-crisp-edges;
+  //image-rendering: crisp-edges;
+  background: black;
   //aspect-ratio: 1 / 0.2;
-  padding: 80px;
+  //padding: 45px 50px 50px 50px;
+  padding: 20px;
   margin: -50px -50px 0 -50px;
   text-align: center;
 
@@ -73,13 +63,6 @@
     top: -15%;
     left: -0%;
   }
-}
-
-.mySlides {
-  //-webkit-animation-name: fade;
-  //-webkit-animation-duration: 1.5s;
-  //animation-name: fade;
-  //animation-duration: 1.5s;`
 }
 
 @-webkit-keyframes fade {
@@ -109,6 +92,7 @@
 .mint_image_amount_container {
   display: flex;
   justify-content: center;
+
   //gap: 20px;
 }
 .amount_container {
@@ -159,7 +143,8 @@
       position: absolute;
       background: url("/img/double-arrow.svg");
       filter: invert(1);
-      height: 100%;
+      height: 80%;
+      top: 10%;
       aspect-ratio: 1 / 1;
       left: 50%;
       transform: translateX(-50%);
@@ -267,17 +252,14 @@
 }
 @media only screen and (max-width: 450px) {
   .mint_heading {
-    padding: 50px 50px 50px 50px;
+    padding: 20px 20px 20px 20px;
     margin: -50px -20px 0 -20px;
-    font-size: 30px
+    font-size: 15px
   }
-
-
-  //.amount_container #number {
-  //  font-size: 55px;
-  //}
 }
-
+.connect-button {
+  font-size: 15px;
+}
 
 .slider_container {
   display: grid;
