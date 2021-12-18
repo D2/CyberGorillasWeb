@@ -1,0 +1,26 @@
+<div class="info_popup">
+    <div class="info_container">
+        <div id="info_title">
+        </div>
+        <div id="info_content">
+        </div>
+        <button id="info_button" onclick="closepopup()">
+        </button>
+    </div>
+
+</div>
+<script>
+    function openpopup(title, content, button) {
+
+        document.getElementById("info_title").innerHTML = title
+        document.getElementById("info_content").innerHTML = content
+        document.getElementById("info_button").innerHTML = button
+        document.getElementsByClassName("info_popup")[0].style.display = "flex"
+
+    }
+    function closepopup() {
+        document.getElementsByClassName("info_popup")[0].style.display = "none"
+    }
+    openpopup("error", "error content", "ok")
+
+</script>

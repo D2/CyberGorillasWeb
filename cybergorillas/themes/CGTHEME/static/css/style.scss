@@ -10,8 +10,14 @@
 @import 'button';
 @import 'mintbutton';
 @import 'mintingpage';
+@import 'errorpopup';
+
 @font-face { font-family: chevy-vector;
-    src: url('/fonts/ChevyRay_-_Vector.ttf')};
+    src: url('/fonts/ChevyRay-Vector.ttf')};
+@font-face { font-family: chevy-chocolate;
+    src: url('/fonts/ChevyRay-Chocolate.ttf')};
+@font-face { font-family: chevy-lazytown;
+    src: url('/fonts/ChevyRay-Lazytown.ttf')};
 * {
     margin: 0;
     padding: 0;
