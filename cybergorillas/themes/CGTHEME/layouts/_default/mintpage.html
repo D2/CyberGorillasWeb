@@ -1,121 +1,129 @@
-{{define "main"}}
-<div class="minting_container">
-<div class="mint-heading_container">
-    <div class="mint_heading">
-        1300/3333
-    </div>
-</div>
-<div class="connect-button">
-    Connect your wallet
-</div>
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+<body>
+{{- partial "background.html" . -}}
+<div id="mint_page_container">
+        <div class="minting_container">
+            <div class="mint-heading_container">
+                <div class="mint_heading">
+                    <strong>CyberGorillas Mint</strong>
+                    <br>
+                    1300/1555
+                </div>
+            </div>
+            <div class="connect-button">
+                Connect your wallet
+            </div>
 
-<div class="mint_image_amount_container">
-    <div class="mint_image_container">
-        <div class="slideshow-container">
-            <div class="mySlides">
-                <img src="https://cdn.discordapp.com/attachments/916103736768733204/916830090330001428/blue.png">
+            <div class="mint_image_amount_container">
+
+                <div class="mint_image_container">
+                    <div class="slideshow-container">
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/916830090330001428/blue.png">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/916830028950544445/Collaboration.png">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/916832325839519775/Browning_PFP.png">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/916830680284033024/1O1_-_Second.png">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/916738285378867230/1O1_-_First.png">
+                        </div>
+                        <div class="team_item_frame">
+                            <img src="https://cdn.discordapp.com/attachments/913686029276418049/916751090207309914/picture_frame.gif" alt="">
+                        </div>
+                    </div>
+
+
+                    <script>
+                        var slideIndex = 0;
+                        showSlides();
+
+                        function showSlides() {
+                            var i;
+                            var slides = document.getElementsByClassName("mySlides");
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                            }
+                            slideIndex++;
+                            if (slideIndex > slides.length) {slideIndex = 1}
+                            slides[slideIndex-1].style.display = "block";
+                            setTimeout(showSlides, 4000); // Change image every 2 seconds
+                        }
+                    </script>
+                </div>
+
+                <div class="amount_container">
+                    <input type="number" value="1" id="number" min="1" max="2" oninput="changeRangeValue(this)"/>
+                    <div class="slider_container">
+                        <input type="range" min="1" max="2" id="range" name="amount" value="0" oninput="changeInputValue(this)" />
+                        <div class="min">1</div>
+                        <div class="max">2</div>
+                    </div>
+                </div>
+                <script>
+
+
+                    function validateMintNum(val) {
+                        if (val == "") {
+                            console.log(val)
+                        }
+                        if ((val == 1)||(val == 2)) {
+                            return val
+                        } else if (val > 2) {
+                            return 2
+                        } else if (val < 1) {
+                            return 1
+                        }
+
+                    }
+                    function changeRangeValue(val){
+                        val = val.value
+                        if (val == "") {
+                            return
+                        }
+
+                        val = validateMintNum(val)
+                        document.getElementById("range").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+                        document.getElementById("number").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+
+                    }
+
+
+                    function changeInputValue(val){
+                        val = val.value
+                        if (val == "") {
+                            return
+                        }
+                        val = validateMintNum(val)
+                        document.getElementById("number").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+                        document.getElementById("range").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+
+
+                    }
+
+
+                </script>
+
+
             </div>
-            <div class="mySlides">
-                <img src="https://cdn.discordapp.com/attachments/916103736768733204/916830028950544445/Collaboration.png">
+            <div class="mint_submit_container">
+                <div class="mint_submit_button">
+                    Mint!
+                </div>
             </div>
-            <div class="mySlides">
-                <img src="https://cdn.discordapp.com/attachments/916103736768733204/916832325839519775/Browning_PFP.png">
-            </div>
-            <div class="mySlides">
-                <img src="https://cdn.discordapp.com/attachments/916103736768733204/916830680284033024/1O1_-_Second.png">
-            </div>
-            <div class="mySlides">
-                <img src="https://cdn.discordapp.com/attachments/916103736768733204/916738285378867230/1O1_-_First.png">
-            </div>
-            <div class="mySlides">
-                <img src="https://media.discordapp.net/attachments/916013862204092508/920814252225331271/Tesla_cybertruck.gif">
-            </div>
-            <div class="mySlides">
-                <img src="https://cdn.discordapp.com/attachments/916103736768733204/921499213781663744/4.png">
-            </div>
-            <div class="mySlides">
-                <img src="https://cdn.discordapp.com/attachments/916103736768733204/921499213563572254/3.png">
-            </div>
-            <div class="mySlides">
-                <img src="https://cdn.discordapp.com/attachments/916103736768733204/921499213374844958/2.png">
-            </div>
-            <div class="mySlides">
-                <img src="https://cdn.discordapp.com/attachments/916103736768733204/921499213131563058/1.png">
-            </div>
-            <div class="team_item_frame">
-                <img src="https://cdn.discordapp.com/attachments/913686029276418049/916751090207309914/picture_frame.gif" alt="">
-            </div>
+
         </div>
 
-
-        <script>
-            var slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {slideIndex = 1}
-                slides[slideIndex-1].style.display = "block";
-                setTimeout(showSlides, 1200); // Change image
-            }
-        </script>
-    </div>
-
-    <div class="amount_container">
-        <input type="number" value="1" id="number" min="1" max="2" oninput="changeRangeValue(this)"/>
-        <div class="slider_container">
-            <input type="range" min="1" max="2" id="range" name="amount" value="0" oninput="changeInputValue(this)" />
-            <div class="min">1</div>
-            <div class="max">2</div>
-        </div>
-    </div>
-    <script>
-        function validateMintNum(val) {
-            if (val == "") {
-                console.log(val)
-            }
-            if ((val == 1)||(val == 2)) {
-                return val
-            } else if (val > 2) {
-                return 2
-            } else if (val < 1) {
-                return 1
-            }
-        }
-        function changeRangeValue(val){
-            val = val.value
-            if (val == "") {
-                return
-            }
-            val = validateMintNum(val)
-            document.getElementById("range").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
-            document.getElementById("number").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
-
-        }
-        function changeInputValue(val){
-            val = val.value
-            if (val == "") {
-                return
-            }
-            val = validateMintNum(val)
-            document.getElementById("number").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
-            document.getElementById("range").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
-        }
-    </script>
-
-
 </div>
-<div class="mint_submit_container">
-    <div class="mint_submit_button">
-        Mint!
-    </div>
-</div>
-
-</div>
-
-{{end}}
+<script>
+    AOS.init();
+</script>
+</body>
+</html>

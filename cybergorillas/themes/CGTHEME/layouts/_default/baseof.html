@@ -4,12 +4,7 @@
     <body>
         {{- partial "background.html" . -}}
         <div class="page-container">
-
-            {{if .Params.home}}
-                {{partial "homeheader"}}
-            {{else}}
-                {{partial "header"}}
-            {{end}}
+            {{- partial "header.html" . -}}
 
             <div id="content">
             {{- block "main" . }}{{- end }}

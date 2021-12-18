@@ -5,23 +5,17 @@
 <!--    <button class="btn"><span>MINT NOW!!!!</span></button>-->
 <!--</div>-->
 
+<div class="logo"  data-aos="fade-down">
+    <img src="https://cdn.discordapp.com/attachments/913686029276418049/915359829588070450/nomatrix.gif" alt="">
+</div>
+{{if where .Site.RegularPages "Type" "Textboxes"}}
 
-<div class="logo_mint_container">
-    {{partial "logo"}}
-    <!--Minting Button-->
-    <div class="mint_container">
-<!--        <a id="mint_button" href="/mint">Mint now!</a>-->
-{{partial "mintbutton"}}
-
-
-
-
-    </div>
-
+<!--Minting Button-->
+<div class="mint_container">
+    <a id="mint_button" href="/mint">Mint now!</a>
 </div>
 
-{{if where .Site.RegularPages "Type" "Textboxes"}}
-<div class="textbox_container cover_image">
+<div class="textbox_container">
     {{ range ( where .Site.RegularPages "Type" "Textboxes" | first 3 ) }}
     <div class="textbox">
         <div class="textbox_content">
@@ -155,7 +149,7 @@
 <div class="heading" data-aos="fade-up">
     <img src="/img/headers/header4.png" alt="">
 </div>
-<!--Utilities-->
+<!--Utilitys-->
 {{if where .Site.RegularPages "Type" "Utilities"}}
 
 <div class="utility_container">
