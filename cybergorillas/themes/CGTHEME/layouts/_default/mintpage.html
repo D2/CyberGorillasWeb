@@ -3,18 +3,100 @@
 {{- partial "head.html" . -}}
 <body>
 {{- partial "background.html" . -}}
+<script src="https://cdn.ethers.io/lib/ethers-5.1.umd.min.js" type="text/javascript"> </script>
+<script>
+    const shortAddress = (address) => {
+        return address.substr(0, 6) + "..." + address.substr(38, 4);
+    };
+
+    const whitelist = {
+        "0x2e5cd1c99c10fbf4bc1cf60d8820696e73e94f52":"0x9196030c975885c08a14fbd97cd39d15c70dc4e150e800609fe5dcf8554a48906c0d895aa7b9d3300dc34823a895815f995f3e3fbb1eaae46dc1361c7fe25fbb1b"
+    };
+
+    var provider = new ethers.providers.Web3Provider(window.ethereum);
+
+    const abi = [
+        "function presale(uint256 amount, bytes memory signature) public payable",
+        "function totalSupply() view returns (uint256)"
+    ];
+
+    var contract;
+
+    if(window.ethereum.selectedAddress) {
+        document.getElementById("connect-button").innerText = shortAddress(window.ethereum.selectedAddress)
+    }
+
+    // var currentAddress = window.ethereum.selectedAddress || "";
+    //
+
+    window.ethereum.on('connect', (_) => {
+        provider.listAccounts().then(accounts => {
+            document.getElementById("connect-button").innerText = shortAddress(accounts[0]);
+        });
+
+        contract =  new ethers.Contract("0x3A47d0656194e9f7cfF9D0146E8F1041C0eaE20b", abi, provider).connect(provider.getSigner())
+        getTotalSupply();
+    });
+
+    window.ethereum.on('accountsChanged', (accounts) => {
+        provider.listAccounts().then(accounts => {
+            if(accounts.length == 0) {
+                document.getElementById("connect-button").innerText = "Connect your wallet";
+            } else {
+                document.getElementById("connect-button").innerText = shortAddress(window.ethereum.selectedAddress)
+            }
+        });
+        getTotalSupply();
+    });
+
+    const getTotalSupply = () => {
+        contract.totalSupply().then(value => {
+            document.getElementById("mint-count").innerText = value.toString();
+        })
+    }
+
+    const handleConnectWallet = () => {
+        window.ethereum.request({ method: 'eth_requestAccounts' });
+    }
+
+    const callMint = () => {
+        if(!window.ethereum.selectedAddress) alert("Please connect your wallet first!");
+        var mintCount = document.getElementById("number").value;
+        contract.presale(
+            mintCount,
+            whitelist[window.ethereum.selectedAddress.toLowerCase()],
+            {value: ethers.utils.parseEther(mintCount === 1 ? '0.05' : '0.10')}
+        ).catch(error => {
+            var alertMessage = "";
+            switch(error.code) {
+                case 4001:
+                    alertMessage = "You have rejected the transaction in your wallet!";
+                    break;
+                case 'UNPREDICTABLE_GAS_LIMIT':
+                    alertMessage = "You are either not on the whitelist, or are trying to mint too many CyberGorillas. Contact us if this is a mistake.";
+                    break;
+                default:
+                    alertMessage = "You are either not on the whitelist, or are trying to mint too many CyberGorillas. Contact us if this is a mistake.";
+                    break;
+            }
+            alert(alertMessage)
+        });
+    }
+
+    AOS.init();
+</script>
 <div id="mint_page_container">
         <div class="minting_container">
             <div class="mint-heading_container">
                 <div class="mint_heading">
                     <strong>CyberGorillas Mint</strong>
                     <br>
-                    1300/1555
+                    <span id="mint-count">0</span>/3333
                 </div>
             </div>
-            <div class="connect-button">
+            <button id='connect-button' class="connect-button" onclick="handleConnectWallet()">
                 Connect your wallet
-            </div>
+            </button>
 
             <div class="mint_image_amount_container">
 
@@ -92,7 +174,6 @@
                         val = validateMintNum(val)
                         document.getElementById("range").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
                         document.getElementById("number").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
-
                     }
 
 
@@ -104,8 +185,6 @@
                         val = validateMintNum(val)
                         document.getElementById("number").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
                         document.getElementById("range").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
-
-
                     }
 
 
@@ -114,7 +193,7 @@
 
             </div>
             <div class="mint_submit_container">
-                <div class="mint_submit_button">
+                <div class="mint_submit_button" onclick="callMint()">
                     Mint!
                 </div>
             </div>
@@ -122,8 +201,5 @@
         </div>
 
 </div>
-<script>
-    AOS.init();
-</script>
 </body>
 </html>
