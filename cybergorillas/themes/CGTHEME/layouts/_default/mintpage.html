@@ -120,6 +120,40 @@
                         <div class="mySlides">
                             <img src="https://cdn.discordapp.com/attachments/916103736768733204/916738285378867230/1O1_-_First.png">
                         </div>
+                        <div class="mySlides">
+                            <img src="https://media.discordapp.net/attachments/916013862204092508/920814252225331271/Tesla_cybertruck.gif">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/921508861549084672/4.png">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/921508861175816212/3.png">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/921508860878000138/2.png">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/921508860622176306/1.png">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/921508860269821952/sneakpeaks-nerd.png">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/921508859783286905/sneakpeaks-diamond.png">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/921508859426795630/sneakpeaks-communist.png">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/921508858885726238/sneakpeaks-beret.png">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/921508856390094948/sneakpeaks-astronaut.png">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://cdn.discordapp.com/attachments/916103736768733204/921508856008437810/sneakpeaks-Wallstreet_guy.png">
+                        </div>
                         <div class="team_item_frame">
                             <img src="https://cdn.discordapp.com/attachments/913686029276418049/916751090207309914/picture_frame.gif" alt="">
                         </div>
@@ -139,30 +173,28 @@
                             slideIndex++;
                             if (slideIndex > slides.length) {slideIndex = 1}
                             slides[slideIndex-1].style.display = "block";
-                            setTimeout(showSlides, 4000); // Change image every 2 seconds
+                            setTimeout(showSlides, 1200); // Change image every 1.2 seconds
                         }
                     </script>
                 </div>
 
                 <div class="amount_container">
-                    <input type="number" value="1" id="number" min="1" max="2" oninput="changeRangeValue(this)"/>
+                    <input type="number" value="1" id="number" min="1" max="5" oninput="changeRangeValue(this)"/>
                     <div class="slider_container">
-                        <input type="range" min="1" max="2" id="range" name="amount" value="0" oninput="changeInputValue(this)" />
+                        <input type="range" min="1" max="5" id="range" name="amount" value="0" oninput="changeInputValue(this)" />
                         <div class="min">1</div>
-                        <div class="max">2</div>
+                        <div class="max">5</div>
                     </div>
                 </div>
                 <script>
-
-
                     function validateMintNum(val) {
                         if (val == "") {
                             console.log(val)
                         }
-                        if ((val == 1)||(val == 2)) {
+                        if ((val <= 5) && (val >= 1))  {
                             return val
-                        } else if (val > 2) {
-                            return 2
+                        } else if (val > 5) {
+                            return 5
                         } else if (val < 1) {
                             return 1
                         }
